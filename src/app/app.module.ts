@@ -16,6 +16,7 @@ import { NewTelephoneComponent } from './content/new-telephone/new-telephone.com
 import { FixComponent } from './content/fix/fix.component';
 import { UsedTelephoneComponent } from './content/used-telephone/used-telephone.component';
 import { PartComponent } from './content/part/part.component';
+import { ConfigurationComponent } from './content/configuration/configuration.component';
 
 
 const routes:Routes=[
@@ -29,8 +30,11 @@ const routes:Routes=[
   {path:'part',component:PartComponent},
   {path:'client',component:BuyclientComponent},
   {path:'supplier',component:SupplierComponent},
-  {path:'',redirectTo:'invoice',pathMatch:'full'},
-  {path:'**',redirectTo:'invoice',pathMatch:'full'}]
+  {path:'accessory',component:AccessoryComponent},
+  {path:'dashboard',component:DashboardComponent},
+  {path:'configuration',component:ConfigurationComponent},
+  {path:'',redirectTo:'dashboard',pathMatch:'full'},
+  {path:'**',redirectTo:'dashboard',pathMatch:'full'}]
 
 
 @NgModule({
@@ -47,7 +51,8 @@ const routes:Routes=[
     NewTelephoneComponent,
     FixComponent,
     UsedTelephoneComponent,
-    PartComponent
+    PartComponent,
+    ConfigurationComponent
   ],
   imports: [
     BrowserModule,
