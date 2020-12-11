@@ -1,6 +1,6 @@
  <!-- Left Panel -->
 
- <aside id="left-panel" class="left-panel">
+ <aside id="left-panel" class="left-panel" *ngIf="!hasRoute('login')">
     <nav class="navbar navbar-expand-sm navbar-default">
 
         <div id="main-menu" class="main-menu collapse navbar-collapse">
@@ -13,7 +13,7 @@
 
 <!-- Right Panel -->
 
-<div id="right-panel" class="right-panel">
+<div id="right-panel" class="right-panel" *ngIf="!hasRoute('login')" >
 
     <!-- Header-->
     <header id="header" class="header">
@@ -129,6 +129,15 @@
     </div><!-- .content -->
 
 
+
+    
+
+
+
+
+
+
+
     <div class="clearfix"></div>
 
     <footer class="site-footer">
@@ -148,3 +157,30 @@
 
 <!-- Right Panel -->
 
+<div class="login-content" *ngIf="hasRoute('login')">
+    <div class="login-logo">
+      <a href="index.html">
+        <img class="align-content" src="assets/images/logo.png" alt="" />
+      </a>
+    </div>
+    <div class="login-form">
+      <label>login : admin  / mp : admin</label>
+      <form action="/dashboard" method="get">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="text" class="form-control" placeholder="Email" value="admin" />
+        </div>
+        <div class="form-group">
+          <label>Mot de passe</label>
+          <input type="password" class="form-control" placeholder="Password" value="admin" />
+        </div>
+        <div class="checkbox">
+
+
+        </div>
+        <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Connexion</button>
+
+
+      </form>
+    </div>
+  </div>

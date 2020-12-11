@@ -17,6 +17,7 @@ import { FixComponent } from './content/fix/fix.component';
 import { UsedTelephoneComponent } from './content/used-telephone/used-telephone.component';
 import { PartComponent } from './content/part/part.component';
 import { ConfigurationComponent } from './content/configuration/configuration.component';
+import { LoginComponent } from './content/login/login.component';
 
 
 const routes:Routes=[
@@ -32,9 +33,10 @@ const routes:Routes=[
   {path:'supplier',component:SupplierComponent},
   {path:'accessory',component:AccessoryComponent},
   {path:'dashboard',component:DashboardComponent},
+  {path:'login',component:LoginComponent},
   {path:'configuration',component:ConfigurationComponent},
-  {path:'',redirectTo:'dashboard',pathMatch:'full'},
-  {path:'**',redirectTo:'dashboard',pathMatch:'full'}]
+  {path:'',redirectTo:'login',pathMatch:'full'},
+  {path:'**',redirectTo:'login',pathMatch:'full'}]
 
 
 @NgModule({
@@ -52,7 +54,8 @@ const routes:Routes=[
     FixComponent,
     UsedTelephoneComponent,
     PartComponent,
-    ConfigurationComponent
+    ConfigurationComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
