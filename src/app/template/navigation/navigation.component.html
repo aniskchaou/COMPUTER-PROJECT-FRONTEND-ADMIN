@@ -1,14 +1,14 @@
-<ul class="nav navbar-nav">
-    <li class="active">
-       <a routerLink="/dashboard"><i class="menu-icon fa fa-laptop"></i>Tableau de bord </a>
+<ul class="nav navbar-nav" style="margin-top: 20px;">
+    <li >
+       <a routerLinkActive="active" routerLink="/dashboard"><i class="menu-icon fa fa-laptop"></i>Tableau de bord </a>
    </li>
  
       <li class="menu-item-has-children dropdown">
-       <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       <a routerLinkActive="active" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="menu-icon fa fa-table"></i>Générale</a>
        <ul class="sub-menu children dropdown-menu">
-           <li><i class="fa fa-table"></i><a routerLink="/fix">Réparations</a></li>
-           <li><i class="fa fa-table"></i><a routerLink="/client">Clients</a></li>
+           <li><i class="fa fa-table"></i><a routerLinkActive="active" routerLink="/fix">Réparations</a></li>
+           <li><i class="fa fa-table"></i><a routerLinkActive="active" routerLink="/client">Clients</a></li>
          <!-- <li><i class="fa fa-table"></i><a routerLink="/fix">Point de vente</a></li>-->
        </ul>
    </li>
@@ -16,12 +16,12 @@
 
 
    <li class="menu-item-has-children dropdown">
-       <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Stock</a>
+       <a routerLinkActive="active" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Stock</a>
        <ul class="sub-menu children dropdown-menu">                            <li><i class="fa fa-puzzle-piece"></i><a routerLink="/part">Pieces de rechange</a></li>
-           <li><i class="fa fa-id-badge"></i><a routerLink="/newphone">Nouveaux Téléphones</a></li>
-           <li><i class="fa fa-bars"></i><a routerLink="/usedphone">Téléphones d'occassion</a></li>
+           <li><i class="fa fa-id-badge"></i><a routerLinkActive="active" routerLink="/newphone">Nouveaux Téléphones</a></li>
+           <li><i class="fa fa-bars"></i><a routerLinkActive="active" routerLink="/usedphone">Téléphones d'occassion</a></li>
 
-           <li><i class="fa fa-id-card-o"></i><a routerLink="/accessory">Accessoires</a></li>
+           <li><i class="fa fa-id-card"></i><a routerLinkActive="active" routerLink="/accessory">Accessoires</a></li>
           <!-- <li><i class="fa fa-exclamation-triangle"></i><a href="ui-alerts.html">Plans cellulaires</a></li>
            <li><i class="fa fa-spinner"></i><a href="ui-progressbar.html">Progress Autre produits</a></li>
            <li><i class="fa fa-fire"></i><a href="ui-modals.html">Imprimer les codes-barres</a></li>
@@ -31,10 +31,10 @@
        </ul>
    </li>
    <li class="menu-item-has-children dropdown">
-       <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Achats</a>
+       <a routerLinkActive="active" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Achats</a>
        <ul class="sub-menu children dropdown-menu">
-           <li><i class="fa fa-table"></i><a routerLink="/supplier">Founisseurs</a></li>
-           <li><i class="fa fa-table"></i><a routerLink="/client">Clients</a></li>
+           <li><i class="fa fa-table"></i><a routerLinkActive="active" routerLink="/supplier">Founisseurs</a></li>
+           <li><i class="fa fa-table"></i><a routerLinkActive="active" routerLink="/client">Clients</a></li>
        </ul>
    </li>
    <!--
@@ -51,9 +51,9 @@
 -->
    
    <li class="menu-item-has-children dropdown">
-       <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Rapports</a>
+       <a routerLinkActive="active" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Rapports</a>
        <ul class="sub-menu children dropdown-menu">
-           <li><i class="menu-icon fa fa-fort-awesome"></i><a routerLink="/stock">Stock</a></li>
+           <li><i class="menu-icon fa fa-fort-awesome"></i><a routerLinkActive="active" routerLink="/stock">Stock</a></li>
            <!--<li><i class="menu-icon ti-themify-logo"></i><a href="font-themify.html">Financier</a></li>
            <li><i class="menu-icon ti-themify-logo"></i><a href="font-themify.html">ventes</a></li>-->
        </ul>
@@ -92,6 +92,6 @@
    </li>
 -->
    <li>
-    <a routerLink="/configuration"><i class="menu-icon fa fa-laptop"></i>Paramètres</a>
+    <a routerLinkActive="active" routerLink="/configuration"><i class="menu-icon fa fa-laptop"></i>Paramètres</a>
 </li>
 </ul>

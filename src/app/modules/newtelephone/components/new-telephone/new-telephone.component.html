@@ -1,0 +1,101 @@
+<div class="card">
+    <div class="card-header">
+        <strong class="card-title">Nouveaux téléphone</strong>
+    </div>
+    <div class="card-body">
+        <table id="bootstrap-data-table" class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>IMEI</th>
+                    <th>Prix</th>
+                    <th>Fabricant</th>
+                    <th>Modele</th>
+                    <th>Statut</th>
+                    <th>Blocker</th>
+                    <th>Vendu</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nokia 4G</td>
+                    <td>4G34</td>
+                    <td>22</td>
+                    <td>Nokia</td>
+                    <td>5K</td>
+                    <td>bon</td>
+                    <td>non</td>
+                    <td>non</td>
+                    <td><button type="button" data-toggle="modal" data-target="#viewNewTelephone" class="btn btn-primary btn-sm"><i class="fas fa-address-book"></i></button>
+                        <button type="button" data-toggle="modal" data-target="#editNewTelephone"class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
+                        <button type="button" class="btn btn-danger btn-sm" onClick={deleteTask}><i class="fas fa-trash-alt"></i></button></td>
+                </tr>
+
+            </tbody>
+        </table>
+        <button  type="button" data-toggle="modal" data-target="#addNewTelephone" class="btn btn-success btn-sm">Ajouter</button>
+
+        <div class="modal fade" id="addNewTelephone" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                <app-add-new-telephone></app-add-new-telephone>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="modal fade" id="editNewTelephone" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                <app-edit-new-telephone></app-edit-new-telephone>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="modal fade" id="viewNewTelephone" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                <app-view-new-telephone></app-view-new-telephone>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>

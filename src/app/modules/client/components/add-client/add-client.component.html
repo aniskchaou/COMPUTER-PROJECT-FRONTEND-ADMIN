@@ -1,0 +1,137 @@
+<form class="col s12" id="client_form" novalidate="">
+    <div class="row">
+        <div class="col-md-12 col-lg-6 input-field">
+            <div class="form-group">
+             <label for="name1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nom de famille</font></font></label><font color="#FF0017"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> *</font></font></font>
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="fas  fa-user"></i>
+                    </div>
+                    <input id="last_name1" name="last_name" type="text" class="validate form-control input-xs" required="">
+                </div>
+                
+            </div>
+        </div>
+         <div class="col-md-12 col-lg-6 input-field">
+            <div class="form-group">
+               <label for="name1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prénom</font></font></label><font color="#FF0017"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> *</font></font></font>
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="fas  fa-user"></i>
+                    </div>
+                    <input id="first_name1" name="first_name" type="text" class="validate form-control input-xs" required="">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   <div class="row">
+        <div class="col-md-12 col-lg-6 input-field">
+            <div class="form-group">
+                <label for="route"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Adresse</font></font></label>                                        <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="fas  fa-road"></i>
+                    </div>
+                    <input class="field form-control input-xs" name="address" required="" id="route">
+                </div>
+            </div>
+        </div>
+       
+        <div class="col-lg-6 col-sm-12">
+            <div class="form-group">
+                <label for="company1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Entreprise</font></font></label>                                        <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="fas  fa-user"></i>
+                    </div>
+                    <input id="company1" name="company" required="" type="text" class="validate form-control input-xs">
+                </div>
+            </div>
+        </div>
+   </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-sm-12">
+            <div class="form-group">
+                <label for="suppliers_postal_code"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">code postal</font></font></label>                                        <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="fas  fa-envelope"></i>
+                    </div>
+                    <input class="field form-control input-xs" name="postal_code" id="postal_code">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-6 input-field">
+            <div class="form-group">
+                <label for="locality"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ville</font></font></label>                                        <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="fas  fa-globe"></i>
+                    </div>
+                    <input type="hidden" class="field form-control input-xs" id="street_number">
+                    <input class="field form-control input-xs" name="city" id="locality">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12 col-lg-6 input-field">
+            <div class="form-group">
+                <label for="telephone1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Téléphone</font></font></label>                                        <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="fas  fa-phone"></i>
+                    </div>
+                    <input type="text" name="telephone" id="telephone1" class="form-control input-xs" data-inputmask="&quot;mask&quot;: &quot;(999) 999-9999&quot;" data-mask="">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-6 input-field">
+            <div class="form-group">
+                <label for="email1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Email</font></font></label>                                        <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="fas  fa-envelope"></i>
+                    </div>
+                    <input name="email" id="email1" type="email" class="validate form-control input-xs">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+     <div class="row">
+        <div class="col-md-12 col-lg-6 input-field">
+            <div class="form-group">
+                <label for="vat1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Entreprise EIN</font></font></label>                                        <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="fas  fa-envelope"></i>
+                    </div>
+                    <input name="vat" id="vat1" value="" class="validate form-control input-xs">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-6 input-field">
+            <div class="form-group">
+                <label for="cf1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Numéro de permis de conduire</font></font></label>                                        <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="fas  fa-quote-left"></i>
+                    </div>
+                    <input name="cf" id="cf1" value="" class="validate form-control input-xs">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <div>
+            <label>
+                <input type="hidden" value="0" name="tax_exempt" class="input-xs">
+            </label>
+         </div>
+                                         <div class="col-md-12 col-lg-4 input-field">
+            <div class="form-group all">
+                <div class="checkbox-styled checkbox-inline">
+                    <input type="hidden" name="universal" value="0" class="input-xs">
+                    <input type="checkbox" id="universal" name="universal" value="1" data-parsley-multiple="universal" class="input-xs">
+                    <label for="universal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Est universel</font></font></label>
+                </div>
+            </div>
+        </div>
+                                    </div>
+</form>

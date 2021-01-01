@@ -1,0 +1,92 @@
+<div class="card">
+    <div class="card-header">
+        <strong class="card-title">Stock</strong>
+    </div>
+    <div class="card-body">
+        <table id="bootstrap-data-table" class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Nom</th>
+                    <th>Prix</th>
+                    <th>Actions</th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hardware</td>
+                    <td>Nokia 4G</td>
+                    <td>444</td>
+                    <td><button type="button" data-toggle="modal" data-target="#viewStock" class="btn btn-primary btn-sm"><i class="fas fa-address-book"></i></button>
+                        <button type="button" data-toggle="modal" data-target="#editStock"class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
+                        <button type="button" class="btn btn-danger btn-sm" ><i class="fas fa-trash-alt"></i></button></td>
+                </tr>
+               
+            </tbody>
+        </table>
+        <button  type="button" data-toggle="modal" data-target="#addStock" class="btn btn-success btn-sm">Ajouter</button>
+
+
+        <div class="modal fade" id="addStock" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                <app-add-stock></app-add-stock>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="modal fade" id="editStock" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                <app-edit-stock></app-edit-stock>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="viewStock" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                <app-view-stock></app-view-stock>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
