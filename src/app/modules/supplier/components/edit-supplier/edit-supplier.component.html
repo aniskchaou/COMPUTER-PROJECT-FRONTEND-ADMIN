@@ -1,1 +1,143 @@
-<p>edit-supplier works!</p>
+<form class="col s12" id="supplier_form">
+    <div class="col-md-12 col-lg-6 input-field">
+        <div class="form-group">
+            <label for="suppliers_name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nom</font></font></label>                                    <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="fas  fa-user"></i>
+                </div>
+                <input id="suppliers_name" name="name" type="text" class="validate form-control input-xs" required="">
+            </div>
+           
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-6 input-field">
+        <div class="form-group">
+            <label for="suppliers_company"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Entreprise</font></font></label>                                    <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="fas  fa-user"></i>
+                </div>
+                <input id="suppliers_company" name="company" type="text" class="validate form-control input-xs" required="">
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-sm-12">
+        <div class="form-group">
+            <label for="geo_locate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Géolocaliser</font></font></label>                                    <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="fas  fa-map-marker"></i>
+                </div>
+                <div id="locationField">
+                  <input id="autocomplete_supplier" class="form-control input-xs" placeholder="Entrez votre adresse" type="text">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 col-sm-12">
+        <div class="form-group">
+            <label for="suppliers_address"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Adresse</font></font></label>                                    <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="fas  fa-road"></i>
+                </div>
+                <input type="hidden" class="field form-control input-xs" id="street_number">
+                <input class="field form-control input-xs" name="address" id="supplier_route">
+            </div>
+            
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-6 input-field">
+        <div class="form-group">
+            <label for="suppliers_city"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ville</font></font></label>                                    <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="fas  fa-globe"></i>
+                </div>
+
+                <input name="city" class="field form-control input-xs" id="supplier_locality">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-6 input-field">
+        <div class="form-group">
+            <label for="suppliers_country"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pays</font></font></label>
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="fas  fa-envelope"></i>
+                </div>
+                <input name="country" class="field form-control input-xs" id="supplier_country">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-6 input-field">
+        <div class="form-group">
+            <label for="suppliers_state"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Etat</font></font></label>
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="fas  fa-envelope"></i>
+                </div>
+                <input name="state" class="field form-control input-xs" id="supplier_administrative_area_level_1">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-6 input-field">
+        <div class="form-group">
+            <label for="suppliers_postal_code"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">code postal</font></font></label>
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="fas  fa-envelope"></i>
+                </div>
+                <input name="postal_code" class="field form-control input-xs" id="supplier_postal_code">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-6 input-field">
+        <div class="form-group">
+            <label for="suppliers_phone"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Téléphone</font></font></label>                                    <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="fas  fa-phone"></i>
+                </div>
+                <input name="phone" type="text" id="suppliers_phone" class="form-control input-xs" data-inputmask="&quot;mask&quot;: &quot;(999) 999-9999&quot;" data-mask="">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-6 input-field">
+        <div class="form-group">
+            <label for="suppliers_email"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Email</font></font></label>
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="fas  fa-envelope"></i>
+                </div>
+                <input name="email" id="suppliers_email" type="email" class="validate form-control input-xs">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-6 input-field">
+        <div class="form-group">
+            <label for="suppliers_url"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">URL</font></font></label>
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="fas  fa-envelope"></i>
+                </div>
+                <input name="url" id="suppliers_url" type="text" class="validate form-control input-xs">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-6 input-field">
+        <div class="form-group">
+            <label for="suppliers_vat_no"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EIN / TVA</font></font></label>                                    <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="fas  fa-envelope"></i>
+                </div>
+                <input name="vat_no" id="suppliers_vat_no" class="validate form-control input-xs">
+            </div>
+        </div>
+    </div>
+                                <div class="col-md-12 col-lg-6 input-field">
+        <div class="form-group all">
+            <div class="checkbox-styled checkbox-inline">
+                <input type="hidden" name="universal" value="0" class="input-xs">
+                <input type="checkbox" id="universal" name="universal" value="1" class="input-xs">
+                <label for="universal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Est universel</font></font></label>
+            </div>
+        </div>
+    </div>
+                            </form>

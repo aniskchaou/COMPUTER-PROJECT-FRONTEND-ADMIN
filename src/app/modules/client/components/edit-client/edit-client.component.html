@@ -1,1 +1,1096 @@
-<p>edit-client works!</p>
+<section class="content">
+					  		  
+    <style>
+#map {
+height: 100%;
+}
+html, body {
+height: 100%;
+margin: 0;
+padding: 0;
+}
+.pac-container {
+background-color: #FFF;
+z-index: 9999;
+position: fixed;
+display: inline-block;
+float: left;
+}
+
+#upload{
+font-family:'PT Sans Narrow', sans-serif;
+background-color:#373a3d;
+
+background-image:-webkit-linear-gradient(top, #373a3d, #313437);
+background-image:-moz-linear-gradient(top, #373a3d, #313437);
+background-image:linear-gradient(top, #373a3d, #313437);
+
+padding:30px;
+border-radius:3px;
+
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#drop{
+background-color: #2E3134;
+padding: 40px 50px;
+margin-bottom: 30px;
+border: 20px solid rgba(0, 0, 0, 0);
+border-radius: 3px;
+border-image: url('https://preview.otsglobal.org/rms_pro/assets/images/border-image.png') 25 repeat;
+text-align: center;
+text-transform: uppercase;
+
+font-size:16px;
+font-weight:bold;
+color:#7f858a;
+}
+
+#drop a{
+background-color:#007a96;
+padding:12px 26px;
+color:#fff;
+font-size:14px;
+border-radius:2px;
+cursor:pointer;
+display:inline-block;
+margin-top:12px;
+line-height:1;
+}
+
+#drop a:hover{
+background-color:#0986a3;
+}
+
+#drop input{
+display:none;
+}
+
+#upload ul{
+list-style:none;
+margin:0 -30px;
+border-top:1px solid #2b2e31;
+border-bottom:1px solid #3d4043;
+}
+
+#upload ul li{
+
+background-color:#333639;
+
+background-image:-webkit-linear-gradient(top, #333639, #303335);
+background-image:-moz-linear-gradient(top, #333639, #303335);
+background-image:linear-gradient(top, #333639, #303335);
+
+border-top:1px solid #3d4043;
+border-bottom:1px solid #2b2e31;
+padding:15px;
+height: 78px;
+
+position: relative;
+}
+
+#upload ul li input{
+display: none;
+}
+
+#upload ul li p{
+width: 144px;
+overflow: hidden;
+white-space: nowrap;
+color: #EEE;
+font-size: 16px;
+font-weight: bold;
+position: absolute;
+top: 20px;
+left: 100px;
+}
+
+#upload ul li i{
+font-weight: normal;
+font-style:normal;
+color:#FFF;
+display:block;
+}
+
+#upload ul li canvas{
+top: 15px;
+left: 32px;
+position: absolute;
+}
+
+#upload ul li span{
+width: 15px;
+height: 12px;
+background: url('https://preview.otsglobal.org/rms_pro/assets/images/icons.png') no-repeat;
+position: absolute;
+top: 34px;
+right: 33px;
+cursor:pointer;
+}
+
+#upload ul li.working span{
+height: 16px;
+background-position: 0 -12px;
+}
+
+#upload ul li.error p{
+color:red;
+}
+</style>
+
+<script type="text/javascript">
+$(document).ready(function(){
+                });
+$(document).ready(function(){
+$('#client_edit_form').parsley({
+successClass: 'has-success',
+errorClass: 'has-error',
+classHandler: function(el) {
+    return el.$element.closest(".form-group");
+},
+errorsWrapper: '<span class="help-block"></span>',
+errorTemplate: "<span></span>",
+errorsContainer: function(el) {
+    return el.$element.closest('.form-group');
+},
+});
+// $('.nav-tabs a:first').tab('show');
+var url = document.location.toString();
+if (url.match('#')) {
+$('.nav-tabs a[href="#' + url.split('#')[1] + '"]').tab('show');
+} else{
+$('.nav-tabs a:first').tab('show');
+}
+// Change hash for page-reload
+$('.nav-tabs a').on('shown.bs.tab', function (e) {
+window.location.hash = e.target.hash;
+})
+}); 
+</script>
+
+<div class="nav-tabs-custom">
+<ul class="nav nav-tabs pull-right">
+
+<li class="">
+<a href="#general" data-toggle="tab" aria-expanded="false">General Information</a>
+</li>
+<li class="active">
+<a href="#internal-notes" data-toggle="tab" aria-expanded="true">Internal Notes</a>
+</li>
+<li class="">
+<a href="#activities" data-toggle="tab" aria-expanded="false">Activities</a>
+</li>
+<li class="">
+<a href="#documents" data-toggle="tab" aria-expanded="false">Documents</a>
+</li>
+        <li class="">
+    <a href="#purchase-history" data-toggle="tab" aria-expanded="false">Purchase History</a>
+</li>
+  
+<li class="pull-left header"><i class="fa fa-user"></i> Edit Customer - Wqdqwdq Rtwg</li>
+</ul>
+<div class="tab-content">
+
+<div class="tab-content">
+                    <div class="tab-pane" id="general">
+                        <form action="https://preview.otsglobal.org/rms_pro/panel/customers/edit/4" id="client_edit_form" method="post" accept-charset="utf-8" novalidate="">
+                        
+                        <div class="row">
+                            
+                            <div class="col-md-12 col-lg-6 input-field">
+                                <div class="form-group">
+                                    <label for="first_name">First Name</label><font color="#FF0017"> *</font>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fas  fa-user"></i>
+                                        </div>
+                                        <input name="first_name" id="first_name" value="wqdqwdq" type="text" class="validate form-control input-xs" required="">
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                             <div class="col-md-12 col-lg-6 input-field">
+                                <div class="form-group">
+                                    <label for="last_name">Last Name</label><font color="#FF0017"> *</font>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fas  fa-user"></i>
+                                        </div>
+                                        <input name="last_name" id="last_name" value="rtwg" type="text" class="validate form-control input-xs" required="">
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-lg-6 input-field">
+                                <div class="form-group">
+                                    <label for="company1">Company</label>                                                <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fas  fa-user"></i>
+                                        </div>
+                                        <input required="" name="company" id="company" value="FWFWF" type="text" class="validate form-control input-xs">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-group">
+                                    <label></label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fas  fa-map-marker"></i>
+                                        </div>
+                                        <div id="locationField">
+                                          <input id="autocomplete" class="form-control pac-target-input input-xs gm-err-autocomplete" placeholder="Oops! Something went wrong." onfocus="geolocate()" type="text" autocomplete="off" disabled="" style="background-image: url(&quot;https://maps.gstatic.com/mapfiles/api-3/images/icon_error.png&quot;);">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-group">
+                                    <label for="route">Address</label>                                                <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fas  fa-road"></i>
+                                        </div>
+                                        <input required="" class="field form-control input-xs" id="route" value="fDFF" name="address">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-6 input-field">
+                                <div class="form-group">
+                                    <label for="locality">City</label>                                                <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fas  fa-globe"></i>
+                                        </div>
+                                        <input type="hidden" class="field form-control input-xs" id="street_number">
+                                        <input class="field form-control input-xs" id="locality" value="" name="city">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-lg-6 input-field">
+                                <div class="form-group">
+                                    <label for="suppliers_state">State</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fas  fa-envelope"></i>
+                                        </div>
+                                        <input class="field form-control input-xs" id="administrative_area_level_1" value="" name="state">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-6 input-field">
+                                <div class="form-group">
+                                    <label for="suppliers_postal_code">Postal Code</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fas  fa-envelope"></i>
+                                        </div>
+                                        <input class="field form-control input-xs" id="postal_code" value="" name="postal_code">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-lg-6 input-field">
+                                <div class="form-group">
+                                    <label for="telephone1">Telephone</label><font color="#FF0017"> *</font>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fas  fa-phone"></i>
+                                        </div>
+                                        <input required="" type="text" id="telephone1" name="telephone" value="" class="form-control input-xs" data-inputmask="&quot;mask&quot;: &quot;(999) 999-9999&quot;" data-mask="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-6 input-field">
+                                <div class="form-group">
+                                    <label for="email1">Email</label>                                                <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fas  fa-envelope"></i>
+                                        </div>
+                                        <input id="email1" name="email" value="" type="email" class="validate form-control input-xs">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-lg-6 input-field">
+                                <div class="form-group">
+                                    <label for="vat1">Business EIN</label>                                                <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fas  fa-envelope"></i>
+                                        </div>
+                                        <input name="vat" id="vat1" value="" class="validate form-control input-xs">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-6 input-field">
+                                <div class="form-group">
+                                    <label for="cf1">Driver License Number</label>                                                <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fas  fa-quote-left"></i>
+                                        </div>
+                                        <input name="cf" id="cf1" value="" class="validate form-control input-xs">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-group">
+                                    <div class="checkbox-styled">
+                                        <input type="hidden" class="input-xs" value="0" name="tax_exempt">
+                                        <input type="checkbox" class="skip input-xs" value="1" name="tax_exempt" id="tax_exempt" data-parsley-multiple="tax_exempt">
+                                        <label for="tax_exempt">Tax Exempt</label>
+                                    </div>
+                                </div>
+                            </div>
+                                                                        <div class="col-lg-6 col-sm-12">
+                                    <div class="form-group all">
+                                        <div class="checkbox-styled checkbox-inline">
+                                            <input type="hidden" name="universal" value="0" class="input-xs">
+                                            <input type="checkbox" checked="" id="universal" name="universal" value="1" data-parsley-multiple="universal" class="input-xs">
+                                            <label for="universal">Is Universal</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                </div>
+                        <div class="row">
+                            <div class="input-field col-lg-12">
+                                <div class="form-group">
+                                    <label for="comment1">Comment</label>                                                <textarea class="form-control" id="comment1" name="comment" rows="6"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-field col-lg-12">
+                            <div class="form-group">
+                               <input type="submit" name="submit" value="Submit" class="btn btn-primary input-xs">
+                            </div>
+                        </div>
+                        </form>                                    <div class="clearfix"></div>
+
+                    </div>
+                    <div class="tab-pane active" id="internal-notes">
+                        <h2>Internal Notes</h2>
+                            <div class="col-md-4">
+                                <form id="add_note">
+                                    <input name="client_id" value="4" type="hidden" class="input-xs">
+                                    <div class="form-group">
+                                        <label>Subject</label>
+                                        <input name="subject" id="subject" class="validate form-control input-xs" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Note</label>
+                                        <textarea class="form-control" id="note" name="note" required="required" rows="6"></textarea>
+                                    </div>
+                                    <div class="input-field ">
+                                        <div class="form-group">
+                                           <input type="submit" name="submit" value="Submit" class="btn btn-primary input-xs">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <script type="text/javascript">
+
+                                $('#add_note').on( "submit", function(event) {
+                                    event.preventDefault(); 
+                                    subject = sanitizer.sanitize($('input[name=subject]').val());
+                                    url = base_url + "panel/customers/add_note";
+                                    dataString = $(this).serialize();
+                                    jQuery.ajax({
+                                        type: "POST",
+                                        url: url,
+                                        data: dataString,
+                                        cache: false,
+                                        success: function (data) {
+                                            toastr['success']("Add", "Note: " + subject + " was added");
+                                            setTimeout(function () {
+                                                $('input[name=subject]').val('')
+                                                $('#note').val('')
+                                                $('#notes-table').DataTable().ajax.reload();
+                                            }, 500);
+                                        }
+                                    });
+                                });
+                                $(document).ready(function () {
+                                 var oTable = $('#notes-table').dataTable({
+                                        "aaSorting": [[0, "desc"]],
+                                        "aLengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
+                                        "iDisplayLength": 10,
+                                        'bProcessing': true, 'bServerSide': true,
+                                        'sAjaxSource': 'https://preview.otsglobal.org/rms_pro/panel/customers/getAllNotes/4',
+                                        'fnServerData': function (sSource, aoData, fnCallback) {
+                                            aoData.push({
+                                                "name": "ci_csrf_token",
+                                                "value": ""
+                                            });
+                                            $.ajax({'dataType': 'json', 'type': 'POST', 'url': sSource, 'data': aoData, 'success': fnCallback});
+                                        }, 
+                                        "aoColumns": [
+                                        {"mRender": fld},
+                                        null,
+                                        null,
+                                      ],
+                                       'fnRowCallback': function (nRow, aData, iDisplayIndex) {
+                                            var oSettings = oTable.fnSettings();
+                                            nRow.id = aData[3];
+                                            nRow.className = "view_note";
+                                            return nRow;
+                                        },
+                                    });
+                                });
+                                $('body').on('click', '.view_note td', function() {
+                                    $('#myModal').modal({remote: site.base_url + 'panel/customers/view_note/' + $(this).parent('.view_note').attr('id')});
+                                    $('#myModal').modal('show');
+                                });
+                            </script>
+                            <div class="col-md-8">
+                                <div id="notes-table_wrapper" class="dataTables_wrapper form-inline no-footer"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="notes-table_length"><label>Show <select name="notes-table_length" aria-controls="notes-table" class="form-control input-sm select input-xs"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option><option value="-1">All</option></select> </label></div></div><div class="col-sm-6"><div id="notes-table_filter" class="dataTables_filter"><label>Search<input type="search" class="form-control input-sm input-xs" placeholder="" aria-controls="notes-table"></label></div></div></div><div class="row"><div class="col-sm-12"><table class="compact table table-striped table-hover dataTable no-footer" id="notes-table" width="100%" role="grid" aria-describedby="notes-table_info" style="width: 100%;">
+                                    <thead>
+                                        <tr role="row"><th class="sorting_desc" tabindex="0" aria-controls="notes-table" rowspan="1" colspan="1" style="width: 0px;" aria-sort="descending" aria-label="Date: activate to sort column ascending">Date</th><th class="sorting" tabindex="0" aria-controls="notes-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Employee: activate to sort column ascending">Employee</th><th class="sorting" tabindex="0" aria-controls="notes-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Subject: activate to sort column ascending">Subject</th></tr>
+                                    </thead>
+                                <tbody><tr class="odd"><td valign="top" colspan="3" class="dataTables_empty">No data available in table</td></tr></tbody></table><div id="notes-table_processing" class="dataTables_processing panel panel-default" style="display: none;">Processing...</div></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="notes-table_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_bootstrap" id="notes-table_paginate"><ul class="pagination pagination-sm"><li class="prev disabled"><a href="#"> &lt; Previous</a></li><li class="next disabled"><a href="#">Next &gt; </a></li></ul></div></div></div></div>
+                            </div>
+
+                        <div class="clearfix"></div>
+
+                    </div>
+                    <div class="tab-pane" id="activities">
+                        <h2>Activities</h2>
+                        <form id="activity_form">
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Activity</label>
+                                    <select name="activity_id" class="form-control tip select2-hidden-accessible select input-xs" id="activity_id" style="width:100%;" required="" data-original-title="" title="" tabindex="-1" aria-hidden="true">
+<option value="2">Call Customer</option>
+<option value="7">Client contactat</option>
+<option value="12">Arena Test</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" title="" tabindex="0" aria-labelledby="select2-activity_id-container"><span class="select2-selection__rendered" id="select2-activity_id-container" title="Call Customer">Call Customer</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                </div>
+                            </div>
+                           
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Sub Activity</label>
+                                    <select id="sub_activity" name="sub_activity" class="form-control select2-hidden-accessible select input-xs" required="" style="width:100%;" tabindex="-1" aria-hidden="true">
+                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-sub_activity-container"><span class="select2-selection__rendered" id="select2-sub_activity-container"></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Reminder Date</label>
+                                    <input id="remind_date" name="remind_date" class="datetime form-control input-xs" required="" type="text">
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Priority</label>
+                                    <select class="form-control select input-xs" required="" name="priority">
+                                        <option value="low">Low</option>
+                                        <option value="medium">Medium</option>
+                                        <option value="high">High</option>
+                                    </select>
+                                </div>
+                            </div>
+                           
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label>Details</label>
+                                    <textarea class="form-control" name="activity_details" rows="4"></textarea>
+                                </div>
+                                <button class="btn btn-primary" id="activity_submit">Add Activity</button>
+                            </div>
+                        </form>
+                        <hr>
+                        <div class="col-lg-12">
+
+                            <fieldset>
+                                <script type="text/javascript">
+                                    var stores = ({"1":{"id":"1","name":"Hueytown","locked":"1","address":"3051 Allison Bon. Mem. Pkwy","city":"","state":"","zipcode":"35023","phone":"(205) 701-7038","invoice_mail":"smartphonesplus.hueytown@gmail.com","new_phone_tax":"2,3,4,5","used_phone_tax":"2,3,4,5","accessories_tax":"2,3,4,5","repair_items_tax":"2,3,4,5","other_items_tax":"2,3,4,5","plans_tax":"2,3,4,5,6","timezone":"America\/Chicago","deleted":"1"},"2":{"id":"2","name":"Store Two","locked":"0","address":"Blah","city":"adsfkjh","state":"al","zipcode":"35023","phone":"9876543678","invoice_mail":"test@test.com","new_phone_tax":"7","used_phone_tax":"2,3,4,5","accessories_tax":"2,3,4,5","repair_items_tax":"2,3,4,5","other_items_tax":"2,3,4,5","plans_tax":"2,3,4,5,6","timezone":"America\/Chicago","deleted":"0"},"3":{"id":"3","name":"Warehouse #1","locked":"1","address":"123 abc st","city":"","state":"","zipcode":"","phone":"2107737251","invoice_mail":"test@test.com","new_phone_tax":"2,3,4,5","used_phone_tax":"2,3,4,5","accessories_tax":"2,3,4,5,6","repair_items_tax":"2,3,4,5","other_items_tax":"2,3,4,5","plans_tax":"2,3,4,5,6","timezone":"America\/Chicago","deleted":"1"},"4":{"id":"4","name":"kdjsafkldjas","locked":"1","address":"54564454","city":"asedf","state":"aadsf","zipcode":"asdf","phone":"54654545","invoice_mail":"test@test.com","new_phone_tax":"4","used_phone_tax":"6","accessories_tax":"5","repair_items_tax":"4","other_items_tax":"5","plans_tax":"4","timezone":"Africa\/Addis_Ababa","deleted":"1"},"5":{"id":"5","name":"nkjkn","locked":"0","address":"kjn","city":"kjnk","state":"nknkn","zipcode":"kjnknj","phone":"kjnk","invoice_mail":"nkn","new_phone_tax":"2,3","used_phone_tax":"4","accessories_tax":"5","repair_items_tax":"6","other_items_tax":"3","plans_tax":"5","timezone":"Africa\/Abidjan","deleted":"1"},"6":{"id":"6","name":"Usman","locked":"0","address":"lahore","city":"lahore","state":"punjab","zipcode":"54000","phone":"+923009405789","invoice_mail":"uskhan099@gmail.com","new_phone_tax":"1","used_phone_tax":"1","accessories_tax":"1","repair_items_tax":"1","other_items_tax":"1","plans_tax":"1","timezone":"Africa\/Abidjan","deleted":"1"},"8":{"id":"8","name":"JKMOBILE","locked":"0","address":"","city":"","state":"","zipcode":"152454","phone":"9419154587","invoice_mail":"","new_phone_tax":"2","used_phone_tax":"2","accessories_tax":"2","repair_items_tax":"2","other_items_tax":"2","plans_tax":"2","timezone":"Asia\/Kolkata","deleted":"0"},"9":{"id":"9","name":"MAD","locked":"0","address":"","city":"","state":"","zipcode":"xx","phone":"xx","invoice_mail":"","new_phone_tax":"1","used_phone_tax":"1","accessories_tax":"1","repair_items_tax":"1","other_items_tax":"1","plans_tax":"1","timezone":"Europe\/Berlin","deleted":"1"},"10":{"id":"10","name":"KPC Shop","locked":"0","address":"","city":"","state":"","zipcode":"55555","phone":"0122348999","invoice_mail":"","new_phone_tax":"1","used_phone_tax":"1","accessories_tax":"1","repair_items_tax":"1","other_items_tax":"1","plans_tax":"1","timezone":"Asia\/Kuala_Lumpur","deleted":"0"},"11":{"id":"11","name":"Abc shopp","locked":"0","address":"","city":"","state":"","zipcode":"55555","phone":"44566777","invoice_mail":"","new_phone_tax":"1","used_phone_tax":"1","accessories_tax":"1","repair_items_tax":"1","other_items_tax":"1","plans_tax":"1","timezone":"Asia\/Kuala_Lumpur","deleted":"0"},"12":{"id":"12","name":"Clinica GSM Piatra Neamt","locked":"1","address":"","city":"","state":"","zipcode":"610000","phone":"0755585180","invoice_mail":"","new_phone_tax":"8","used_phone_tax":"8","accessories_tax":"8","repair_items_tax":"8","other_items_tax":"8","plans_tax":"8","timezone":"Europe\/Bucharest","deleted":"0"},"13":{"id":"13","name":"ClinicaGSM Iasi","locked":"1","address":"","city":"","state":"","zipcode":"700063","phone":"0765713088","invoice_mail":"","new_phone_tax":"8","used_phone_tax":"8","accessories_tax":"8","repair_items_tax":"8","other_items_tax":"8","plans_tax":"8","timezone":"Europe\/Bucharest","deleted":"1"},"14":{"id":"14","name":"Net365","locked":"1","address":"","city":"","state":"","zipcode":"4930","phone":"968034565","invoice_mail":"","new_phone_tax":"1","used_phone_tax":"1","accessories_tax":"1","repair_items_tax":"1","other_items_tax":"1","plans_tax":"1","timezone":"Europe\/Lisbon","deleted":"1"},"15":{"id":"15","name":"SPV Air","locked":"1","address":"2222","city":"bangkok","state":"thailand","zipcode":"10210","phone":"022222222","invoice_mail":"aa@aa.com","new_phone_tax":"1","used_phone_tax":"1","accessories_tax":"1","repair_items_tax":"1","other_items_tax":"1","plans_tax":"1","timezone":"Asia\/Bangkok","deleted":"1"},"16":{"id":"16","name":"WIZ","locked":"1","address":"1234 main","city":"NY","state":"NY","zipcode":"123456","phone":"4555555546","invoice_mail":"est@admin.com","new_phone_tax":"3","used_phone_tax":"3","accessories_tax":"3","repair_items_tax":"1","other_items_tax":"2","plans_tax":"1","timezone":"Africa\/Abidjan","deleted":"1"},"17":{"id":"17","name":"Mrfone Shop","locked":"1","address":"Muscat ","city":"Mutrah","state":"Muscat","zipcode":"114","phone":"79021109","invoice_mail":"info@net2ring.com","new_phone_tax":"1","used_phone_tax":"1","accessories_tax":"1","repair_items_tax":"1","other_items_tax":"1","plans_tax":"1","timezone":"Asia\/Muscat","deleted":"1"},"18":{"id":"18","name":"RGB","locked":"0","address":"dsakjkkjh","city":"af","state":"wqq","zipcode":"432","phone":"41249129","invoice_mail":"aaa@aaa.com","new_phone_tax":"1","used_phone_tax":"1","accessories_tax":"1","repair_items_tax":"1","other_items_tax":"1","plans_tax":"1","timezone":"Europe\/Rome","deleted":"1"},"19":{"id":"19","name":"SG Store","locked":"0","address":"18B\/007 CC Hu\u1ef3nh V\u0103n Ch\u00ednh, Ph\u00fa Trung, T\u00e2n Ph\u00fa","city":"TP HCM","state":"HCM","zipcode":"700000","phone":"0933266692","invoice_mail":"sgstore@gmail.com","new_phone_tax":"1","used_phone_tax":"1","accessories_tax":"1","repair_items_tax":"1","other_items_tax":"1","plans_tax":"1","timezone":"Asia\/Jakarta","deleted":"0"},"20":{"id":"20","name":"JonaxHS","locked":"0","address":"La vid 3","city":"Uruapan","state":"upn","zipcode":"60156","phone":"4525019616","invoice_mail":"pagospayer@gmail.com","new_phone_tax":"1","used_phone_tax":"1","accessories_tax":"1","repair_items_tax":"1","other_items_tax":"1","plans_tax":"1","timezone":"America\/Mexico_City","deleted":"1"},"21":{"id":"21","name":"Viber","locked":"0","address":"pao ole","city":"athens","state":"pao","zipcode":"13","phone":"1234054","invoice_mail":"pao@ole.com","new_phone_tax":"18","used_phone_tax":"18","accessories_tax":"18","repair_items_tax":"18","other_items_tax":"18","plans_tax":"18","timezone":"Europe\/Zagreb","deleted":"0"},"22":{"id":"22","name":"Arena","locked":"0","address":"gennekenstraat 00","city":"breda","state":"Nord brabant","zipcode":"4888HH","phone":"0649999999","invoice_mail":"cayan.warden@gmail.com","new_phone_tax":"3","used_phone_tax":"1","accessories_tax":"3","repair_items_tax":"3","other_items_tax":"3","plans_tax":"3","timezone":"Europe\/Amsterdam","deleted":"0"}});
+                                   
+
+                                    function activity_priority(x) {
+                                        if (x == 'low') {
+                                            return '<span class="label label-info">'+(x)+'</span>';
+                                        } else if (x == 'medium') {
+                                            return '<span class="label label-warning">'+(x)+'</span>';
+                                        } else if (x == 'high') {
+                                            return '<span class="label label-danger">'+(x)+'</span>';
+                                        }else{
+                                            return '<span class="label label-primary">'+(x)+'</span>';
+                                        }
+                                    }
+                                    function activity_status(x) {
+                                        var pqc = x.split('___');
+                                        if ((pqc[1] == 'open')) {
+                                            return '<button id="change_to_close" data-num="'+pqc[0]+'" class="btn btn-warning btn-sm">'+lang.mark_closed+'</button>';
+                                        }else{
+                                            return '<span class="label label-primary">'+(pqc[1])+'</span>';
+                                        }
+                                    }
+
+                                    $(document).ready(function () {
+                                        var oTable = $('#activity-table').dataTable({
+                                            "aaSorting": [[0, "desc"]],
+                                            "aLengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
+                                            "iDisplayLength": 10,
+                                            'bProcessing': true, 'bServerSide': true,
+                                            'sAjaxSource': 'https://preview.otsglobal.org/rms_pro/panel/customers/getAllActivities/4',
+                                            'fnServerData': function (sSource, aoData, fnCallback) {
+                                                aoData.push({
+                                                    "name": "ci_csrf_token",
+                                                    "value": ""
+                                                });
+                                                $.ajax({'dataType': 'json', 'type': 'POST', 'url': sSource, 'data': aoData, 'success': fnCallback});
+                                            }, 
+                                            "aoColumns": [
+                                                null,
+                                                null,
+                                                null,
+                                                {mRender: fld},
+                                                {mRender: activity_priority},
+                                                {mRender: activity_status},
+                                            ],
+                                            'fnRowCallback': function (nRow, aData, iDisplayIndex) {
+                                                var oSettings = oTable.fnSettings();
+                                                nRow.id = aData[6];
+                                                nRow.className = "view_act";
+                                                return nRow;
+                                            },
+                                        });
+                                    });
+                                    $('body').on('click', '.view_act td:not(:last-child)', function() {
+                                        $('#myModal').modal({remote: site.base_url + 'panel/customers/view_note/' + $(this).parent('.view_act').attr('id') + '/1'});
+                                        $('#myModal').modal('show');
+                                    });
+
+
+                                </script>
+                                <br>
+                                <legend>Activities</legend>
+                                <div id="activity-table_wrapper" class="dataTables_wrapper form-inline"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="activity-table_length"><label>Show <select name="activity-table_length" aria-controls="activity-table" class="form-control input-sm select input-xs"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option><option value="-1">All</option></select> </label></div></div><div class="col-sm-6"><div id="activity-table_filter" class="dataTables_filter"><label>Search<input type="search" class="form-control input-sm input-xs" placeholder="" aria-controls="activity-table"></label></div></div></div><div class="row"><div class="col-sm-12"><table class="compact table table-bordered table-striped dataTable" id="activity-table" width="100%" role="grid" aria-describedby="activity-table_info" style="width: 100%;">
+                                    <thead>
+                                        <tr role="row"><th class="sorting_desc" tabindex="0" aria-controls="activity-table" rowspan="1" colspan="1" style="width: 0px;" aria-sort="descending" aria-label="Activity: activate to sort column ascending">Activity</th><th class="sorting" tabindex="0" aria-controls="activity-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Sub Activity: activate to sort column ascending">Sub Activity</th><th class="sorting" tabindex="0" aria-controls="activity-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Locations: activate to sort column ascending">Locations</th><th class="sorting" tabindex="0" aria-controls="activity-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Remind Date: activate to sort column ascending">Remind Date</th><th class="sorting" tabindex="0" aria-controls="activity-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Priority: activate to sort column ascending">Priority</th><th class="sorting" tabindex="0" aria-controls="activity-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Status: activate to sort column ascending">Status</th></tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr><th rowspan="1" colspan="1">Activity</th><th rowspan="1" colspan="1">Sub Activity</th><th rowspan="1" colspan="1">Locations</th><th rowspan="1" colspan="1">Remind Date</th><th rowspan="1" colspan="1">Priority</th><th rowspan="1" colspan="1">Status</th></tr>
+                                    </tfoot>
+                                <tbody><tr class="odd"><td valign="top" colspan="6" class="dataTables_empty">No data available in table</td></tr></tbody></table><div id="activity-table_processing" class="dataTables_processing panel panel-default" style="display: none;">Processing...</div></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="activity-table_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_bootstrap" id="activity-table_paginate"><ul class="pagination pagination-sm"><li class="prev disabled"><a href="#"> &lt; Previous</a></li><li class="next disabled"><a href="#">Next &gt; </a></li></ul></div></div></div></div>
+                            </fieldset>
+                        </div>
+
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="tab-pane" id="documents"><h2>Documents</h2>
+                        <label for="upload_manager">Attachments</label>
+                        <div class="file-input file-input-ajax-new"><div class="file-preview ">
+<button type="button" class="close fileinput-remove" aria-label="Close">
+<span aria-hidden="true">×</span>
+</button>    <div class=" file-drop-zone"><div class="file-drop-zone-title">Drag &amp; drop files here …</div>
+<div class="file-preview-thumbnails">
+</div>
+<div class="clearfix"></div>    <div class="file-preview-status text-center text-success"></div>
+<div class="kv-fileinput-error file-error-message" style="display: none;"></div>
+</div>
+</div>
+<div class="kv-upload-progress kv-hidden" style="display: none;"><div class="progress">
+<div class="progress-bar bg-success progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;">
+0%
+</div>
+</div></div><div class="clearfix"></div>
+<div class="input-group file-caption-main">
+<div class="file-caption form-control kv-fileinput-caption" tabindex="500">
+<span class="file-caption-icon"></span>
+<input class="file-caption-name" onkeydown="return false;" onpaste="return false;" placeholder="Select files...">
+</div>
+<div class="input-group-btn">
+<button type="button" tabindex="500" title="Clear selected files" class="btn btn-default btn-secondary fileinput-remove fileinput-remove-button"><i class="glyphicon glyphicon-trash"></i>  <span class="hidden-xs">Remove</span></button>
+<button type="button" tabindex="500" title="Abort ongoing upload" class="btn btn-default btn-secondary kv-hidden fileinput-cancel fileinput-cancel-button"><i class="glyphicon glyphicon-ban-circle"></i>  <span class="hidden-xs">Cancel</span></button>
+<a href="https://preview.otsglobal.org/rms_pro/panel/customers/upload_attachments" tabindex="500" title="Upload selected files" class="btn btn-default btn-secondary fileinput-upload fileinput-upload-button"><i class="glyphicon glyphicon-upload"></i>  <span class="hidden-xs">Upload</span></a>
+<div tabindex="500" class="btn btn-primary btn-file"><i class="glyphicon glyphicon-folder-open"></i>&nbsp;  <span class="hidden-xs">Browse …</span><input id="upload_manager_clients" name="upload_manager[]" type="file" multiple="" class="input-xs"></div>
+</div>
+</div></div>
+                    </div>
+                                                    <div class="tab-pane" id="purchase-history">
+
+                        <fieldset>
+                            <script type="text/javascript">
+                                function pqFormat(x) {
+                                    if (x != null) {
+                                        var d = '', pqc = x.split("___");
+                                        for (index = 0; index < pqc.length; ++index) {
+                                            var pq = pqc[index];
+                                            var v = pq.split("__");
+                                            d += v[0]+'<br>';
+                                        }
+                                        return d;
+                                    } else {
+                                        return '';
+                                    }
+                                }
+                                function formatToMoney(x) {
+                                    return formatMoney(x);
+                                }
+
+                                $(document).ready(function () {
+                                    var oTable = $('#dynamic-table').dataTable({
+                                        "aaSorting": [[0, "desc"]],
+                                        "aLengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
+                                        "iDisplayLength": 10,
+                                        'bProcessing': true, 'bServerSide': true,
+                                        'sAjaxSource': 'https://preview.otsglobal.org/rms_pro/panel/customers/getAllSales/4',
+                                        'fnServerData': function (sSource, aoData, fnCallback) {
+                                            aoData.push({
+                                                "name": "ci_csrf_token",
+                                                "value": ""
+                                            });
+                                            $.ajax({'dataType': 'json', 'type': 'POST', 'url': sSource, 'data': aoData, 'success': fnCallback});
+                                        }, 
+                                        "aoColumns": [
+                                        null,
+                                        {"mRender": fld},
+                                        null,
+                                        {mRender: pqFormat},
+                                        {mRender: formatToMoney},
+                                        {mRender: formatToMoney},
+                                        {mRender: formatToMoney},
+                                        null,
+                                        ],
+                                        "fnFooterCallback": function (nRow, aaData, iStart, iEnd, aiDisplay) {
+                                            var gtotal = 0, paid = 0, balance = 0;
+                                            for (var i = 0; i < aaData.length; i++) {
+                                                gtotal += parseFloat(aaData[aiDisplay[i]][4]);
+                                                paid += parseFloat(aaData[aiDisplay[i]][5]);
+                                                balance += parseFloat(aaData[aiDisplay[i]][6]);
+                                            }
+                                            var nCells = nRow.getElementsByTagName('th');
+                                            nCells[4].innerHTML = formatMoney(parseFloat(gtotal));
+                                            nCells[5].innerHTML = formatMoney(parseFloat(paid));
+                                            nCells[6].innerHTML = formatMoney(parseFloat(balance));
+                                        }
+                                    }).fnSetFilteringDelay().dtFilter([
+                                        {column_number: 0, filter_default_label: "[ID]", filter_type: "text", data: []},
+                                        {column_number: 1, filter_default_label: "[Date (mm-dd-yyyy)]", filter_type: "text", data: []},
+                                        {column_number: 2, filter_default_label: "[Customer Name]", filter_type: "text", data: []},
+                                        {column_number: 3, filter_default_label: "[Items]", filter_type: "text", data: []},
+                                    ], "footer");
+                                });
+                            </script>
+                            <legend>Sales</legend>
+                            <div id="dynamic-table_wrapper" class="dataTables_wrapper form-inline"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="dynamic-table_length"><label>Show <select name="dynamic-table_length" aria-controls="dynamic-table" class="form-control input-sm select input-xs"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option><option value="-1">All</option></select> </label></div></div><div class="col-sm-6"><div id="dynamic-table_filter" class="dataTables_filter"><label>Search<input type="search" class="form-control input-sm input-xs" placeholder="" aria-controls="dynamic-table"></label></div></div></div><div class="row"><div class="col-sm-12"><table class="compact table table-bordered table-striped dataTable" id="dynamic-table" width="100%" role="grid" aria-describedby="dynamic-table_info" style="width: 100%;">
+                                <thead>
+                                    <tr role="row"><th class="sorting_desc" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" style="width: 0px;" aria-sort="descending" aria-label="Sale ID: activate to sort column ascending">Sale ID</th><th class="sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Date: activate to sort column ascending">Date</th><th class="sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Customers: activate to sort column ascending">Customers</th><th class="sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Items: activate to sort column ascending">Items</th><th class="sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Subtotal: activate to sort column ascending">Subtotal</th><th class="sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Tax: activate to sort column ascending">Tax</th><th class="sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Total: activate to sort column ascending">Total</th><th class="sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Actions: activate to sort column ascending">Actions</th></tr>
+                                </thead>
+                                <tfoot>
+                                    <tr><th rowspan="1" colspan="1"></th><th rowspan="1" colspan="1"></th><th rowspan="1" colspan="1"></th><th rowspan="1" colspan="1"></th><th rowspan="1" colspan="1">0.00 Euro</th><th rowspan="1" colspan="1">0.00 Euro</th><th rowspan="1" colspan="1">0.00 Euro</th><th rowspan="1" colspan="1">Actions</th></tr>
+                                </tfoot>
+                            <tbody><tr class="odd"><td valign="top" colspan="8" class="dataTables_empty">No data available in table</td></tr></tbody></table><div id="dynamic-table_processing" class="dataTables_processing panel panel-default" style="display: none;">Processing...</div></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="dynamic-table_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_bootstrap" id="dynamic-table_paginate"><ul class="pagination pagination-sm"><li class="prev disabled"><a href="#"> &lt; Previous</a></li><li class="next disabled"><a href="#">Next &gt; </a></li></ul></div></div></div></div>
+                        </fieldset>
+                        <fieldset>
+                            <script type="text/javascript">
+                                $(document).ready(function () {
+                                    var oTable = $('#RESLData').dataTable({
+                                        "aaSorting": [[0, "desc"]],
+                                        "aLengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
+                                        "iDisplayLength": 10,
+                                        'bProcessing': true, 'bServerSide': true,
+                                        'sAjaxSource': 'https://preview.otsglobal.org/rms_pro/panel/customers/getReturns/4',
+                                        'fnServerData': function (sSource, aoData, fnCallback) {
+                                            aoData.push({
+                                                "name": "ci_csrf_token",
+                                                "value": ""
+                                            });
+                                            $.ajax({'dataType': 'json', 'type': 'POST', 'url': sSource, 'data': aoData, 'success': fnCallback});
+                                        },
+                                        'fnRowCallback': function (nRow, aData, iDisplayIndex) {
+                                            var oSettings = oTable.fnSettings();
+                                            nRow.id = aData[7];
+                                            nRow.className = "invoice_link2";
+                                            return nRow;
+                                        },
+                                        "aoColumns": [{"mRender": fld}, null, null, null, null, {"mRender": currencyFormat}, {"mRender": currencyFormat}, {"bSortable": false, "bVisible": false}, {"bSortable": false, "bSearchable": false}],
+                                    });
+                                });
+                            </script>
+                            <legend>Refunds</legend>
+                            <div id="RESLData_wrapper" class="dataTables_wrapper form-inline no-footer"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="RESLData_length"><label>Show <select name="RESLData_length" aria-controls="RESLData" class="form-control input-sm select input-xs"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option><option value="-1">All</option></select> </label></div></div><div class="col-sm-6"><div id="RESLData_filter" class="dataTables_filter"><label>Search<input type="search" class="form-control input-sm input-xs" placeholder="" aria-controls="RESLData"></label></div></div></div><div class="row"><div class="col-sm-12"><table id="RESLData" class="table table-bordered table-hover table-striped dataTable no-footer" width="100%" role="grid" aria-describedby="RESLData_info" style="width: 100%;">
+                                <thead>
+                                <tr role="row"><th class="sorting_desc" tabindex="0" aria-controls="RESLData" rowspan="1" colspan="1" style="width: 0px;" aria-sort="descending" aria-label="Date: activate to sort column ascending">Date</th><th class="sorting" tabindex="0" aria-controls="RESLData" rowspan="1" colspan="1" style="width: 0px;" aria-label="Purchase Order: activate to sort column ascending">Purchase Order</th><th class="sorting" tabindex="0" aria-controls="RESLData" rowspan="1" colspan="1" style="width: 0px;" aria-label="Sale Reference: activate to sort column ascending">Sale Reference</th><th class="sorting" tabindex="0" aria-controls="RESLData" rowspan="1" colspan="1" style="width: 0px;" aria-label="Biller: activate to sort column ascending">Biller</th><th class="sorting" tabindex="0" aria-controls="RESLData" rowspan="1" colspan="1" style="width: 0px;" aria-label="Customer: activate to sort column ascending">Customer</th><th class="sorting" tabindex="0" aria-controls="RESLData" rowspan="1" colspan="1" style="width: 0px;" aria-label="Surcharge: activate to sort column ascending">Surcharge</th><th class="sorting" tabindex="0" aria-controls="RESLData" rowspan="1" colspan="1" style="width: 0px;" aria-label="Grand Total: activate to sort column ascending">Grand Total</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 0px;" aria-label="Actions">Actions</th></tr>
+                                </thead>
+                                <tbody>
+                                    
+                                <tr class="odd"><td valign="top" colspan="8" class="dataTables_empty">No data available in table</td></tr></tbody>
+                            </table><div id="RESLData_processing" class="dataTables_processing panel panel-default" style="display: none;">Processing...</div></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="RESLData_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_bootstrap" id="RESLData_paginate"><ul class="pagination pagination-sm"><li class="prev disabled"><a href="#"> &lt; Previous</a></li><li class="next disabled"><a href="#">Next &gt; </a></li></ul></div></div></div></div>
+                        </fieldset>
+                        <fieldset>
+                            <script type="text/javascript">
+                            function row_status(x) {
+                                if (x == 1) {
+                                    return '<div class="text-center"><span class="label label-warning">'+lang.ready_to_purchase+'</span></div>';
+                                } else if(x == 2) {
+                                    return '<div class="text-center"><span class="label label-success">'+lang.purchased+'</span></div>';
+                                }else{
+                                    return x;
+                                }
+                            }
+                                $(document).ready(function () {
+                                    var oTable = $('#POData').dataTable({
+                                        "aaSorting": [[1, "desc"]],
+                                        "aLengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
+                                        "iDisplayLength": 10,
+                                        'bProcessing': true, 'bServerSide': true,
+                                        'sAjaxSource': 'https://preview.otsglobal.org/rms_pro/panel/customers/getCustomerPurchases/4',
+                                        'fnServerData': function (sSource, aoData, fnCallback) {
+                                            aoData.push({
+                                                "name": "ci_csrf_token",
+                                                "value": ""
+                                            });
+                                            $.ajax({'dataType': 'json', 'type': 'POST', 'url': sSource, 'data': aoData, 'success': fnCallback});
+                                        },
+                                        "aoColumns": [
+                                                {"mRender": fld},
+                                                // null, 
+                                                null, 
+                                                {"mRender": row_status}, 
+                                                {"mRender": currencyFormat}, 
+                                            ],
+                                        'fnRowCallback': function (nRow, aData, iDisplayIndex) {
+                                            var oSettings = oTable.fnSettings();
+                                            nRow.id = aData[4];
+                                            nRow.className = "purchase_link";
+                                            return nRow;
+                                        },
+                                        "fnFooterCallback": function (nRow, aaData, iStart, iEnd, aiDisplay) {
+                                            var total = 0, paid = 0, balance = 0;
+                                            for (var i = 0; i < aaData.length; i++) {
+                                                total   +=  parseInt(aaData[aiDisplay[i]]['3']);
+                                            }
+                                            var nCells = nRow.getElementsByTagName('th');
+                                            nCells[3].innerHTML = 'Euro ' + (total);
+                                        },
+                                        
+                                    })
+                                });
+
+                            </script>
+                            <legend>Customer Purchases</legend>
+                            <div id="POData_wrapper" class="dataTables_wrapper form-inline"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="POData_length"><label>Show <select name="POData_length" aria-controls="POData" class="form-control input-sm select input-xs"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option><option value="-1">All</option></select> </label></div></div><div class="col-sm-6"><div id="POData_filter" class="dataTables_filter"><label>Search<input type="search" class="form-control input-sm input-xs" placeholder="" aria-controls="POData"></label></div></div></div><div class="row"><div class="col-sm-12"><table id="POData" cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-hover table-striped dataTable" width="100%" role="grid" aria-describedby="POData_info" style="width: 100%;">
+                                <thead>
+                                <tr class="default" role="row"><th class="sorting" tabindex="0" aria-controls="POData" rowspan="1" colspan="1" style="width: 0px;" aria-label="Date: activate to sort column ascending">Date</th><th class="sorting_desc" tabindex="0" aria-controls="POData" rowspan="1" colspan="1" style="width: 0px;" aria-sort="descending" aria-label="Customer: activate to sort column ascending">Customer</th><th class="sorting" tabindex="0" aria-controls="POData" rowspan="1" colspan="1" style="width: 0px;" aria-label="Status: activate to sort column ascending">Status</th><th class="sorting" tabindex="0" aria-controls="POData" rowspan="1" colspan="1" style="width: 0px;" aria-label="Grand Total: activate to sort column ascending">Grand Total</th></tr>
+                                </thead>
+                                <tbody>
+                                
+                                <tr class="odd"><td valign="top" colspan="4" class="dataTables_empty">No data available in table</td></tr></tbody>
+                                <tfoot class="dtFilter">
+                                <tr><th rowspan="1" colspan="1">Date</th><th rowspan="1" colspan="1">Customer</th><th rowspan="1" colspan="1">Status</th><th rowspan="1" colspan="1">Euro 0</th></tr>
+                                </tfoot>
+                            </table><div id="POData_processing" class="dataTables_processing panel panel-default" style="display: none;">Processing...</div></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="POData_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_bootstrap" id="POData_paginate"><ul class="pagination pagination-sm"><li class="prev disabled"><a href="#"> &lt; Previous</a></li><li class="next disabled"><a href="#">Next &gt; </a></li></ul></div></div></div></div>
+                        </fieldset>
+                        <fieldset>
+                            <script type="text/javascript">
+
+
+                            function actions(x) {
+                            var pqc = x.split("___");
+                            if (pqc[1] == 1) {
+                            var button = "<li><a id='toggle' data-num='"+pqc[0]+"' data-mode='enable' data-toggle='tooltip' data-placement='top' title=\"Enable This Repair\"><i class='fas fa-toggle-on'></i> "+lang.enable+"</a></li>";
+                            }else{
+                            var button = "<li><a id='toggle' data-num='"+pqc[0]+"' data-mode='disable' data-toggle='tooltip' data-placement='top' title=\"Disable This Repair\"><i class='fas fa-toggle-off'></i> "+lang.disable+"</a></li>";
+                            }
+var view = "<li><a class='view' data-toggle=\"modal\" data-target=\"#myModalLG\"  href='https://preview.otsglobal.org/rms_pro/panel/repair/view/"+pqc[0]+"'><i class='fas fa-check'></i> View Repair</a></li>";
+                            
+                            var edit = "<li><a href=https://preview.otsglobal.org/rms_pro/panel/repair/edit/"+pqc[0]+"><i class='fas fa-edit'></i> "+lang.edit_repair+"</a></li>";
+                            var email = "<li><a id='email' data-num='"+pqc[0]+"'><i class='fas fa-envelope'></i> "+lang.send_email+"</a></li>";
+
+                            var view_payments = '<li><a class="" data-toggle="modal" data-target="#myModal" href="https://preview.otsglobal.org/rms_pro/panel/repair/payments/'+pqc[0]+'"><i class="fas fa-money-bill-alt"></i> View Payments</a></li>';
+                            var add_payment = '<li><a class="" data-toggle="modal" data-target="#myModal" href="https://preview.otsglobal.org/rms_pro/panel/repair/add_payment/'+pqc[0]+'"><i class="fas fa-money-bill-alt"></i> Add Payment</a></li>';
+                            var print_barcode = '<li><a href="https://preview.otsglobal.org/rms_pro/panel/repair/print_barcodes/'+pqc[0]+'"><i class="fas fa-print"></i> Print Barcode</a></li>'; 
+
+                            var return_var = "<div class='btn-group'><button type=\"button\" class=\"btn btn-default btn-xs btn-primary dropdown-toggle\" data-toggle=\"dropdown\" aria-expanded=\"true\">Actions</button><ul class=\"dropdown-menu pull-right\" role=\"menu\">";
+                                                                    return_var += edit;
+                                                                    return_var += view;
+                            return_var += view_payments;
+                            return_var += add_payment;
+                            return_var += print_barcode;
+                            return_var += email;
+                            return_var += button;
+                            return_var += '</ul></div>';
+
+                            return return_var;
+                            }
+
+                            $(document).ready(function () {
+                                var oTable = $('#repair-table').DataTable({
+                                    "aaSorting": [[5, "desc"]],
+                                    "aLengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
+                                    "iDisplayLength": 10,
+                                    'bProcessing': true, 'bServerSide': true,
+                                    'sAjaxSource': 'https://preview.otsglobal.org/rms_pro/panel/customers/getAllRepairs/4',
+                                    'fnServerData': function (sSource, aoData, fnCallback) {
+                                        aoData.push({
+                                            "name": "ci_csrf_token",
+                                            "value": ""
+                                        });
+                                        $.ajax({'dataType': 'json', 'type': 'POST', 'url': sSource, 'data': aoData, 'success': fnCallback});
+                                    },
+                                    "aoColumns": [
+                                    null,
+                                    null,
+                                    {"mRender": tp},
+                                    null,
+                                    null,
+                                    {"mRender": fld},
+                                    {"mRender": status},
+                                    null,
+                                    {mRender: formatToMoney},
+                                    {mRender: formatToMoney},
+                                    {"mRender": pay_status}, 
+                                    {"mRender": warranty},
+                                    {"mRender": actions},
+                                    ],
+
+                                });
+
+                            });
+
+                            </script>
+                            <legend>Repair History</legend>
+                            <div id="repair-table_wrapper" class="dataTables_wrapper form-inline no-footer"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="repair-table_length"><label>Show <select name="repair-table_length" aria-controls="repair-table" class="form-control input-sm select input-xs"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option><option value="-1">All</option></select> </label></div></div><div class="col-sm-6"><div id="repair-table_filter" class="dataTables_filter"><label>Search<input type="search" class="form-control input-sm input-xs" placeholder="" aria-controls="repair-table"></label></div></div></div><div class="row"><div class="col-sm-12"><table class="compact table table-bordered table-striped dataTable no-footer" id="repair-table" width="100%" role="grid" aria-describedby="repair-table_info" style="width: 100%;">
+                                <thead>
+                                    <tr role="row"><th class="sorting" tabindex="0" aria-controls="repair-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Serial Number: activate to sort column ascending">Serial Number</th><th class="sorting" tabindex="0" aria-controls="repair-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Name: activate to sort column ascending">Name</th><th class="sorting" tabindex="0" aria-controls="repair-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Telephone: activate to sort column ascending">Telephone</th><th class="sorting" tabindex="0" aria-controls="repair-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Defect: activate to sort column ascending">Defect</th><th class="sorting" tabindex="0" aria-controls="repair-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Model: activate to sort column ascending">Model</th><th class="sorting_desc" tabindex="0" aria-controls="repair-table" rowspan="1" colspan="1" style="width: 0px;" aria-sort="descending" aria-label="Opened At: activate to sort column ascending">Opened At</th><th class="sorting" tabindex="0" aria-controls="repair-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Repair Status: activate to sort column ascending">Repair Status</th><th class="sorting" tabindex="0" aria-controls="repair-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Repair Code: activate to sort column ascending">Repair Code</th><th class="sorting" tabindex="0" aria-controls="repair-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Grand Total: activate to sort column ascending">Grand Total</th><th class="sorting" tabindex="0" aria-controls="repair-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Paid: activate to sort column ascending">Paid</th><th class="sorting" tabindex="0" aria-controls="repair-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Payment Status: activate to sort column ascending">Payment Status</th><th class="sorting" tabindex="0" aria-controls="repair-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Warranty: activate to sort column ascending">Warranty</th><th class="sorting" tabindex="0" aria-controls="repair-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Actions: activate to sort column ascending">Actions</th></tr>
+                                </thead>
+
+
+                            <tbody><tr role="row" class="odd"><td>35817262726227</td><td>wqdqwdq rtwg</td><td></td><td>Fine</td><td>566</td><td class="sorting_1">29.12.2020 06:00:31</td><td><div class="text-center"><span class="row_status label" style="background-color:#f4c8c8; color:#000000;">Received</span></div></td><td>REPAIR/2020/12/0018</td><td>0.00 Euro</td><td>0.00 Euro</td><td><div class="text-center"><span class="payment_status label label-warning">Pending</span></div></td><td>Warranty not started yet</td><td><div class="btn-group"><button type="button" class="btn btn-default btn-xs btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Actions</button><ul class="dropdown-menu pull-right" role="menu"><li><a href="https://preview.otsglobal.org/rms_pro/panel/repair/edit/18"><i class="fas fa-edit"></i> Edit Repair</a></li><li><a class="view" data-toggle="modal" data-target="#myModalLG" href="https://preview.otsglobal.org/rms_pro/panel/repair/view/18"><i class="fas fa-check"></i> View Repair</a></li><li><a class="" data-toggle="modal" data-target="#myModal" href="https://preview.otsglobal.org/rms_pro/panel/repair/payments/18"><i class="fas fa-money-bill-alt"></i> View Payments</a></li><li><a class="" data-toggle="modal" data-target="#myModal" href="https://preview.otsglobal.org/rms_pro/panel/repair/add_payment/18"><i class="fas fa-money-bill-alt"></i> Add Payment</a></li><li><a href="https://preview.otsglobal.org/rms_pro/panel/repair/print_barcodes/18"><i class="fas fa-print"></i> Print Barcode</a></li><li><a id="email" data-num="18"><i class="fas fa-envelope"></i> Send Email</a></li><li><a id="toggle" data-num="18" data-mode="disable" data-toggle="tooltip" data-placement="top" title="Disable This Repair"><i class="fas fa-toggle-off"></i> Disable</a></li></ul></div></td></tr><tr role="row" class="even"><td></td><td>wqdqwdq rtwg</td><td></td><td>SCREEN</td><td>IPHONE</td><td class="sorting_1">25.12.2020 18:59:48</td><td><div class="text-center"><span class="row_status label" style="background-color:#f4c8c8; color:#000000;">Received</span></div></td><td>REPAIR/2020/12/0013</td><td>100.00 Euro</td><td>0.00 Euro</td><td><div class="text-center"><span class="payment_status label label-warning">Pending</span></div></td><td>Warranty not started yet</td><td><div class="btn-group"><button type="button" class="btn btn-default btn-xs btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Actions</button><ul class="dropdown-menu pull-right" role="menu"><li><a href="https://preview.otsglobal.org/rms_pro/panel/repair/edit/13"><i class="fas fa-edit"></i> Edit Repair</a></li><li><a class="view" data-toggle="modal" data-target="#myModalLG" href="https://preview.otsglobal.org/rms_pro/panel/repair/view/13"><i class="fas fa-check"></i> View Repair</a></li><li><a class="" data-toggle="modal" data-target="#myModal" href="https://preview.otsglobal.org/rms_pro/panel/repair/payments/13"><i class="fas fa-money-bill-alt"></i> View Payments</a></li><li><a class="" data-toggle="modal" data-target="#myModal" href="https://preview.otsglobal.org/rms_pro/panel/repair/add_payment/13"><i class="fas fa-money-bill-alt"></i> Add Payment</a></li><li><a href="https://preview.otsglobal.org/rms_pro/panel/repair/print_barcodes/13"><i class="fas fa-print"></i> Print Barcode</a></li><li><a id="email" data-num="13"><i class="fas fa-envelope"></i> Send Email</a></li><li><a id="toggle" data-num="13" data-mode="disable" data-toggle="tooltip" data-placement="top" title="Disable This Repair"><i class="fas fa-toggle-off"></i> Disable</a></li></ul></div></td></tr></tbody></table><div id="repair-table_processing" class="dataTables_processing panel panel-default" style="display: none;">Processing...</div></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="repair-table_info" role="status" aria-live="polite">Showing 1 to 2 of 2 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_bootstrap" id="repair-table_paginate"><ul class="pagination pagination-sm"><li class="prev disabled"><a href="#"> &lt; Previous</a></li><li class="active"><a href="#">1</a></li><li class="next disabled"><a href="#">Next &gt; </a></li></ul></div></div></div></div>
+                        </fieldset>
+                    </div>
+                                            </div>
+<!-- /.tab-pane -->
+</div>
+<!-- /.tab-content -->
+</div>
+
+<script>
+// This example displays an address form, using the autocomplete feature
+// of the Google Places API to help users fill in the information.
+
+// This example requires the Places library. Include the libraries=places
+// parameter when you first load the API. For example:
+// <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+var placeSearch, autocomplete;
+
+var componentForm = {
+street_number: 'long_name',
+route: 'long_name',
+locality: 'long_name',
+administrative_area_level_1: 'short_name',
+postal_code: 'short_name'
+};
+
+
+function initAutocomplete() {
+// Create the autocomplete object, restricting the search to geographical
+// location types.
+autocomplete = new google.maps.places.Autocomplete(
+/** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+{types: ['geocode']});
+
+// When the user selects an address from the dropdown, populate the address
+// fields in the form.
+autocomplete.addListener('place_changed', fillInAddress);
+}
+
+function fillInAddress() {
+// Get the place details from the autocomplete object.
+var place = autocomplete.getPlace();
+
+for (var component in componentForm) {
+document.getElementById(component).value = '';
+document.getElementById(component).disabled = false;
+}
+
+// Get each component of the address from the place details
+// and fill the corresponding field on the form.
+// Get each component of the address from the place details
+// and fill the corresponding field on the form.
+var fullAddress = [];
+for (var i = 0; i < place.address_components.length; i++) {
+var addressType = place.address_components[i].types[0];
+if (componentForm[addressType]) {
+    var val = place.address_components[i][componentForm[addressType]];
+    document.getElementById(addressType).value = val;
+}
+if (addressType == "street_number") {
+    fullAddress[0] = val;
+} else if (addressType == "route") {
+    fullAddress[1] = val;
+}
+}
+document.getElementById('route').value = fullAddress.join(" ");
+if (document.getElementById('route').value !== "") {
+document.getElementById('route').disabled = false;
+}
+}
+
+
+// Bias the autocomplete object to the user's geographical location,
+// as supplied by the browser's 'navigator.geolocation' object.
+function geolocate() {
+if (navigator.geolocation) {
+navigator.geolocation.getCurrentPosition(function(position) {
+var geolocation = {
+  lat: position.coords.latitude,
+  lng: position.coords.longitude
+};
+var circle = new google.maps.Circle({
+  center: geolocation,
+  radius: position.coords.accuracy
+});
+autocomplete.setBounds(circle.getBounds());
+});
+}
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCROnyHmLmoEhgXf9SkwViO9j5zptQ7f78&amp;libraries=places&amp;callback=initAutocomplete" async="" defer=""></script>
+<script type="text/javascript">
+$(function(){
+$('#activity_id').select2();
+
+var ul = $('#upload ul');
+$('#drop a').on( "click", function(){
+$(this).parent().find('input').click();
+});
+var inc = 1;
+
+$(document).on('click', '#change_to_close', function (event) {
+event.preventDefault();
+var id = $(this).data('num');
+jQuery.ajax({
+type: "POST",
+url: base_url + "panel/customers/closeActivity",
+data: "id=" + encodeURI(id),
+cache: false,
+dataType: "json",
+success: function (data) {
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "progressBar": true,
+        "positionClass": "toast-bottom-right",
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    }
+    toastr['success']("Activity Status Changed");
+    $('#activity-table').DataTable().ajax.reload();
+}
+});
+});
+});
+jQuery(document).ready( function($) {
+$('#activity_id').on('change', function (e) {
+$('#sub_activity').val('').trigger('change');
+});
+$( "#sub_activity" ).select2({        
+ajax: {
+placeholder: "Select a Activity",
+url: "https://preview.otsglobal.org/rms_pro/panel/settings/getActivitiesAjax/0",
+dataType: 'json',
+delay: 250,
+data: function (params) {
+    return {
+        q: params.term,
+        activity_id: $('#activity_id').val(),
+    };
+},
+processResults: function (data) {
+    return {
+        results: data
+    };
+},
+cache: true
+},
+});
+});
+
+$('#activity_form').on( "submit", function(event) {
+event.preventDefault();
+var url = "";
+var dataString = "";
+
+url = base_url + "panel/customers/activity_add/4";
+dataString = $(this).serialize();
+jQuery.ajax({
+type: "POST",
+url: url,
+data: dataString,
+cache: false,
+success: function (data) {
+setTimeout(function () {
+    $('#activity_form :input').val('');
+    $('#activity-table').DataTable().ajax.reload();
+}, 500);
+}
+});
+return false;
+});
+
+
+
+
+var count = 1;
+$(document).ready(function(){
+try {
+var lang_fileinput = {"fileSingle":"file","filePlural":"files","browseLabel":"Browse &hellip;","removeLabel":"Remove","removeTitle":"Clear selected files","cancelLabel":"Cancel","cancelTitle":"Abort ongoing upload","uploadLabel":"Upload","uploadTitle":"Upload selected files","msgNo":"No","msgNoFilesSelected":"No files selected","msgCancelled":"Cancelled","msgPlaceholder":"Select {files}...","msgZoomModalHeading":"Detailed Preview","msgFileRequired":"You must select a file to upload.","msgSizeTooSmall":"File \"{name}\" (<b>{size} KB<\/b>) is too small and must be larger than <b>{minSize} KB<\/b>.","msgSizeTooLarge":"File \"{name}\" (<b>{size} KB<\/b>) exceeds maximum allowed upload size of <b>{maxSize} KB<\/b>.","msgFilesTooLess":"You must select at least <b>{n}<\/b> {files} to upload.","msgFilesTooMany":"Number of files selected for upload <b>({n})<\/b> exceeds maximum allowed limit of <b>{m}<\/b>.","msgFileNotFound":"File \"{name}\" not found!","msgFileSecured":"Security restrictions prevent reading the file \"{name}\".","msgFileNotReadable":"File \"{name}\" is not readable.","msgFilePreviewAborted":"File preview aborted for \"{name}\".","msgFilePreviewError":"An error occurred while reading the file \"{name}\".","msgInvalidFileName":"Invalid or unsupported characters in file name \"{name}\".","msgInvalidFileType":"Invalid type for file \"{name}\". Only \"{types}\" files are supported.","msgInvalidFileExtension":"Invalid extension for file \"{name}\". Only \"{extensions}\" files are supported.","msgFileTypes":{"image":"image","html":"HTML","text":"text","video":"video","audio":"audio","flash":"flash","pdf":"PDF","object":"object"},"msgUploadAborted":"The file upload was aborted","msgUploadThreshold":"Processing...","msgUploadBegin":"Initializing...","msgUploadEnd":"Done","msgUploadEmpty":"No valid data available for upload.","msgUploadError":"Error","msgValidationError":"Validation Error","msgLoading":"Loading file {index} of {files} &hellip;","msgProgress":"Loading file {index} of {files} - {name} - {percent}% completed.","msgSelected":"{n} {files} selected","msgFoldersNotAllowed":"Drag & drop files only! Skipped {n} dropped folder(s).","msgImageWidthSmall":"Width of image file \"{name}\" must be at least {size} px.","msgImageHeightSmall":"Height of image file \"{name}\" must be at least {size} px.","msgImageWidthLarge":"Width of image file \"{name}\" cannot exceed {size} px.","msgImageHeightLarge":"Height of image file \"{name}\" cannot exceed {size} px.","msgImageResizeError":"Could not get the image dimensions to resize.","msgImageResizeException":"Error while resizing the image.<pre>{errors}<\/pre>","msgAjaxError":"Something went wrong with the {operation} operation. Please try again later!","msgAjaxProgressError":"{operation} failed","ajaxOperations":{"deleteThumb":"file delete","uploadThumb":"file upload","uploadBatch":"batch file upload","uploadExtra":"form data upload"},"dropZoneTitle":"Drag & drop files here &hellip;","dropZoneClickTitle":"<br>(or click to select {files})","fileActionSettings":{"removeTitle":"Remove file","uploadTitle":"Upload file","uploadRetryTitle":"Retry upload","downloadTitle":"Download file","zoomTitle":"View details","dragTitle":"Move \/ Rearrange","indicatorNewTitle":"Not uploaded yet","indicatorSuccessTitle":"Uploaded","indicatorErrorTitle":"Upload Error","indicatorLoadingTitle":"Uploading ..."},"previewZoomButtonTitles":{"prev":"View previous file","next":"View next file","toggleheader":"Toggle header","fullscreen":"Toggle full screen","borderless":"Toggle borderless mode","close":"Close detailed preview"}};
+} catch (e){
+var lang_fileinput = {"fileSingle":"file","filePlural":"files","browseLabel":"Browse &hellip;","removeLabel":"Remove","removeTitle":"Clear selected files","cancelLabel":"Cancel","cancelTitle":"Abort ongoing upload","uploadLabel":"Upload","uploadTitle":"Upload selected files","msgNo":"No","msgNoFilesSelected":"No files selected","msgCancelled":"Cancelled","msgPlaceholder":"Select {files}...","msgZoomModalHeading":"Detailed Preview","msgFileRequired":"You must select a file to upload.","msgSizeTooSmall":"File \"{name}\" (<b>{size} KB<\/b>) is too small and must be larger than <b>{minSize} KB<\/b>.","msgSizeTooLarge":"File \"{name}\" (<b>{size} KB<\/b>) exceeds maximum allowed upload size of <b>{maxSize} KB<\/b>.","msgFilesTooLess":"You must select at least <b>{n}<\/b> {files} to upload.","msgFilesTooMany":"Number of files selected for upload <b>({n})<\/b> exceeds maximum allowed limit of <b>{m}<\/b>.","msgFileNotFound":"File \"{name}\" not found!","msgFileSecured":"Security restrictions prevent reading the file \"{name}\".","msgFileNotReadable":"File \"{name}\" is not readable.","msgFilePreviewAborted":"File preview aborted for \"{name}\".","msgFilePreviewError":"An error occurred while reading the file \"{name}\".","msgInvalidFileName":"Invalid or unsupported characters in file name \"{name}\".","msgInvalidFileType":"Invalid type for file \"{name}\". Only \"{types}\" files are supported.","msgInvalidFileExtension":"Invalid extension for file \"{name}\". Only \"{extensions}\" files are supported.","msgFileTypes":{"image":"image","html":"HTML","text":"text","video":"video","audio":"audio","flash":"flash","pdf":"PDF","object":"object"},"msgUploadAborted":"The file upload was aborted","msgUploadThreshold":"Processing...","msgUploadBegin":"Initializing...","msgUploadEnd":"Done","msgUploadEmpty":"No valid data available for upload.","msgUploadError":"Error","msgValidationError":"Validation Error","msgLoading":"Loading file {index} of {files} &hellip;","msgProgress":"Loading file {index} of {files} - {name} - {percent}% completed.","msgSelected":"{n} {files} selected","msgFoldersNotAllowed":"Drag & drop files only! Skipped {n} dropped folder(s).","msgImageWidthSmall":"Width of image file \"{name}\" must be at least {size} px.","msgImageHeightSmall":"Height of image file \"{name}\" must be at least {size} px.","msgImageWidthLarge":"Width of image file \"{name}\" cannot exceed {size} px.","msgImageHeightLarge":"Height of image file \"{name}\" cannot exceed {size} px.","msgImageResizeError":"Could not get the image dimensions to resize.","msgImageResizeException":"Error while resizing the image.<pre>{errors}<\/pre>","msgAjaxError":"Something went wrong with the {operation} operation. Please try again later!","msgAjaxProgressError":"{operation} failed","ajaxOperations":{"deleteThumb":"file delete","uploadThumb":"file upload","uploadBatch":"batch file upload","uploadExtra":"form data upload"},"dropZoneTitle":"Drag & drop files here &hellip;","dropZoneClickTitle":"<br>(or click to select {files})","fileActionSettings":{"removeTitle":"Remove file","uploadTitle":"Upload file","uploadRetryTitle":"Retry upload","downloadTitle":"Download file","zoomTitle":"View details","dragTitle":"Move \/ Rearrange","indicatorNewTitle":"Not uploaded yet","indicatorSuccessTitle":"Uploaded","indicatorErrorTitle":"Upload Error","indicatorLoadingTitle":"Uploading ..."},"previewZoomButtonTitles":{"prev":"View previous file","next":"View next file","toggleheader":"Toggle header","fullscreen":"Toggle full screen","borderless":"Toggle borderless mode","close":"Close detailed preview"}};
+}
+$.fn.fileinputLocales['mylang'] = (lang_fileinput);
+
+num = 4;
+setTimeout(function () {
+$.ajax({
+    type: 'POST',
+    url: "https://preview.otsglobal.org/rms_pro/panel/customers/getAttachments",
+    dataType: "json",
+    data:({ "id": num }),
+    success: function (data) {
+        $('#upload_manager_clients').fileinput('destroy');
+        $("#upload_manager_clients").fileinput({
+                language: "mylang",
+
+            initialPreviewAsData: true, 
+            initialPreview: data.urls,
+            initialPreviewConfig: data.previews,
+            deleteUrl: "https://preview.otsglobal.org/rms_pro/panel/customers/delete_attachment",
+            maxFileSize: 999999,
+            uploadExtraData: {id:num},
+            uploadUrl: "https://preview.otsglobal.org/rms_pro/panel/customers/upload_attachments",
+            uploadAsync: false,
+            overwriteInitial: false,
+            showPreview: true,
+            // language: 'mylang',
+        }).on('filebatchuploadsuccess', function(event, data, previewId, index) {
+            $('#dynamic-table').DataTable().ajax.reload();
+        });
+    }
+});
+}, 1500);
+
+});
+
+</script>		<div class="clearfix"></div>
+
+</section>

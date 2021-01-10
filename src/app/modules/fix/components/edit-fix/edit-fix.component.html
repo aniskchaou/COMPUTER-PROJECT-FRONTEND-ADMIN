@@ -1,1 +1,116 @@
-<p>edit-fix works!</p>
+<div class="box-body">
+    <div class="row">
+        <div class="col-md-12 col-lg-4 bio-row">
+            <p><span class="bold"><i class="fas fa-user"></i> Customer</span><span id="rv_client">rueds joan</span></p>
+        </div>
+
+        <div class="col-md-12 col-lg-4 bio-row">
+            <p><span class="bold"><i class="fas fa-phone"></i> Telephone</span><span id="rv_telephone"></span></p>
+        </div>
+
+        <div class="col-md-12 col-lg-4 bio-row stato">
+            <p><span class="bold"><i class="fas fa-signal"></i> Condition </span><span id="rv_condition">7</span></p>
+        </div>
+        <div class="col-md-12 col-lg-4 bio-row">
+            <p><span class="bold"><i class="fas fa-calendar"></i> Opened At </span><span id="rv_created_at">08.01.2021 14:14:22</span></p>
+        </div>
+        <div class="col-md-12 col-lg-4 bio-row">
+            <p><span class="bold"><i class="fas fa-link"></i> Defect </span><span id="rv_defect">disply not working</span></p>
+        </div>
+        <div class="col-md-12 col-lg-4 bio-row">
+            <p><span class="bold"><i class="fas fa-folder-open"></i> Category </span><span id="rv_category">Tablet</span></p>
+        </div>
+        <div class="col-md-12 col-lg-4 bio-row">
+            <p><span class="bold"><i class="fas fa-tag"></i> IMEI/Serial </span><span id="rv_imei">34567</span></p>
+        </div>
+        <div class="col-md-12 col-lg-4 bio-row">
+            <p><span class="bold"><i class="fas fa-tag"></i> Manufacturer </span><span id="rv_manufacturer">Dell</span></p>
+        </div>
+        <div class="col-md-12 col-lg-4 bio-row">
+            <p><span class="bold"><i class="fas fa-tag"></i> Model </span><span id="rv_model">gbn</span></p>
+        </div>
+
+        <div class="col-md-12 col-lg-4 bio-row">
+            <p><span class="bold"><i class="fas fa-dollar-sign"></i>Deposit</span><span id="rv_advance">0.00 Euro</span></p>
+        </div>
+        <div class="col-md-12 col-lg-4 bio-row nofloat">
+            <p><span class="bold"><i class="fas fa-dollar-sign"></i>Repair Price </span><span id="rv_price">777.00 Euro</span></p>
+        </div>
+        <div class="col-md-12 col-lg-4 bio-row">
+            <p><span class="bold"><i class="fas fa-phone"></i> Telephone </span><span id="rv_phone_number"></span></p>
+        </div>
+        <div class="col-md-12 col-lg-4 bio-row">
+            <p><span class="bold"><i class="fas fa-eye"></i> Repair Code </span><span id="rv_rep_code">REPAIR/0029</span></p>
+        </div>
+
+        <div class="col-md-12 col-lg-4 bio-row">
+            <p><span class="bold"><i class="fas fa-eye"></i> Assign Repair To </span><span id="rv_assigned_to">Admin Admin</span></p>
+        </div>
+
+                        <div class="col-md-12 col-lg-4 bio-row">
+                <p><span class="bold"><i class="fas fa-info-circle"></i> Deposit </span><span class="show_custom" id="v4465706f736974"></span></p>
+            </div>
+        
+
+         <div class="col-md-12">
+                        <label class="table-label" for="combo">Summary of Repairs</label>
+
+                        <div class="controls table-controls">
+                            <table id="prTable" class="table items table-striped table-bordered table-condensed table-hover">
+                                <thead>
+                                <tr>
+                                    <th class="col-md-5">Product Name (UPC Code)</th>
+                                    <th class="col-md-2">Unit Cost</th>
+                                    <th class="col-md-2">Unit Price</th>
+                                    <th class="col-md-2">Discount</th>
+                                    <th class="col-md-2">Tax</th>
+                                </tr>
+                                </thead>
+                                <tbody><tr><td colspan="4">nothing to display</td></tr></tbody>
+
+                            </table>
+                            <table class="table items table-striped table-bordered table-condensed table-hover">
+                                <tfoot>
+                                    <tr>
+                                        <th colspan="1" class="warning"><span class="pull-right">Subtotal</span></th>
+                                        <th colspan="1" class="info"><span id="price_span">0</span></th>
+
+                                        <th colspan="1" class="warning"><span class="pull-right">Total Tax</span></th>
+                                        <th colspan="1" class="success"><span id="tax_spane">0.00</span></th>
+
+                                    </tr>
+                                    <tr id="labor_tr">
+                                        <th colspan="1" class="warning"><span class="pull-right">Labor</span></th>
+                                        <th colspan="1" class="success"><span id="sc_span">777.00</span></th>
+                                        <th colspan="1" class="warning"><span class="pull-right">Labor + Total</span></th>
+                                        <th colspan="1" class="success"><span id="totalprice_span">777.00</span></th>
+
+                                    </tr>
+                                    <tr>
+                                        <th colspan="3" class="warning"><span class="pull-right">Grand Total</span></th>
+                                        <th class="success"><span id="gtotal">777.00</span></th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-6 bio-row fastsms">
+                    <div class="form-group rv_comment">
+                        <label for="fastsms">Quick SMS</label>                            <textarea class="form-control" id="fastsms" rows="6" placeholder="Instantly send a text message to the client by entering your text here"></textarea>
+                        <button type="button" id="sendsmsfast" class="btn btn-xs btn-primary"><i class="fas fa-check"></i> Send</button>
+                    </div>
+                </div>
+                <div class="col-md-6 bio-row textareacom">
+                    <div class="form-group comment">
+                        <label for="rv_comment">Noted Problems &amp; Technician Comments</label>&nbsp;(Please note any and all defects with device. This will show up on the work order report.)
+                        <textarea class="form-control" id="rv_comment" rows="6">hhhhhhhhhhh</textarea>
+                        <button type="button" id="updateComment" class="btn btn-xs btn-primary"><i class="fas fa-check"></i> Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
