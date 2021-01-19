@@ -1,1 +1,266 @@
-<p>edit-used-telephone works!</p>
+<form  class="parsley-form" method="post" accept-charset="utf-8" novalidate="">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label for="phone_name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Afficher un nom</font></font></label>                            <input type="text" class="form-control" value="" name="phone_name" required="">
+            </div>
+        </div>
+    </div>
+                            <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="rating">
+                                                                <input name="cosmetic_condition" value="5" id="cosmetic_5" type="radio" required="" data-parsley-multiple="cosmetic_condition">
+                            <label for="cosmetic_5"><i class="fas fa-star"></i>
+                            </label>
+                                                                <input name="cosmetic_condition" value="4" id="cosmetic_4" type="radio" required="" data-parsley-multiple="cosmetic_condition">
+                            <label for="cosmetic_4"><i class="fas fa-star"></i>
+                            </label>
+                                                                <input name="cosmetic_condition" value="3" id="cosmetic_3" type="radio" required="" data-parsley-multiple="cosmetic_condition">
+                            <label for="cosmetic_3"><i class="fas fa-star"></i>
+                            </label>
+                                                                <input name="cosmetic_condition" value="2" id="cosmetic_2" type="radio" required="" data-parsley-multiple="cosmetic_condition">
+                            <label for="cosmetic_2"><i class="fas fa-star"></i>
+                            </label>
+                                                                <input name="cosmetic_condition" value="1" id="cosmetic_1" type="radio" required="" data-parsley-multiple="cosmetic_condition">
+                            <label for="cosmetic_1"><i class="fas fa-star"></i>
+                            </label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                                            Condition cosmétique                                </font></font></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="form-group">
+                        <div class="rating">
+                                                                        <input required="" name="operational_condition" value="5" id="operational_5" type="radio" data-parsley-multiple="operational_condition">
+                                <label for="operational_5"><i class="fas fa-star"></i>
+                                </label>
+                                                                        <input required="" name="operational_condition" value="4" id="operational_4" type="radio" data-parsley-multiple="operational_condition">
+                                <label for="operational_4"><i class="fas fa-star"></i>
+                                </label>
+                                                                        <input required="" name="operational_condition" value="3" id="operational_3" type="radio" data-parsley-multiple="operational_condition">
+                                <label for="operational_3"><i class="fas fa-star"></i>
+                                </label>
+                                                                        <input required="" name="operational_condition" value="2" id="operational_2" type="radio" data-parsley-multiple="operational_condition">
+                                <label for="operational_2"><i class="fas fa-star"></i>
+                                </label>
+                                                                        <input required="" name="operational_condition" value="1" id="operational_1" type="radio" data-parsley-multiple="operational_condition">
+                                <label for="operational_1"><i class="fas fa-star"></i>
+                                </label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                                                    Condition opérationnelle                                    </font></font></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                            <div class="row">
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label for="manufacturer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fabricant</font></font></label>                                    <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fas  fa-folder"></i>
+                            </div>
+                                                                    <select name="manufacturer" class="form-control select2-hidden-accessible" id="manufacturer" style="width: 100%;" required="" tabindex="-1" aria-hidden="true">
+<option value="41"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pomme</font></font></option>
+<option value="42"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dell</font></font></option>
+<option value="94"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kia</font></font></option>
+<option value="96"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">kjhjkjhk</font></font></option>
+<option value="106"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Huawei</font></font></option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-manufacturer-container"><span class="select2-selection__rendered" id="select2-manufacturer-container" title="Pomme"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pomme</font></font></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                            <a class="add_manufacturer btn input-group-addon"><i class="fas fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label for="p_model"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nom du modèle</font></font></label>                                    <input type="text" required="" class="form-control" value="" name="model">
+                    </div>
+                </div>
+                <div class="col-lg-12 input-field">
+                    <div class="form-group">
+                        <label for="warranty_plans"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Plans de garantie</font></font></label>                                    <select name="warranty_id" class="form-control tip select2-hidden-accessible" id="warranty_id" style="width:100%;" required="" tabindex="-1" aria-hidden="true" data-original-title="" title="">
+<option value="0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Aucune garantie</font></font></option>
+<option value="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3 mois</font></font></option>
+<option value="3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0 jours</font></font></option>
+<option value="4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3 années</font></font></option>
+<option value="6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0 jours</font></font></option>
+<option value="7"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1 mois</font></font></option>
+<option value="8"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1 ans</font></font></option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-warranty_id-container"><span class="select2-selection__rendered" id="select2-warranty_id-container" title="Aucune garantie"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Aucune garantie</font></font></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                   </div>
+                </div>
+                
+                                             <div class="col-lg-12">
+                    <div class="form-group">
+                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Statut</font></font></label>
+                        <select style="width: 100%" class="form-control select2-hidden-accessible" required="" name="phone_status" tabindex="-1" aria-hidden="true">
+                            <option value=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sélectionnez l'état du téléphone</font></font></option>
+                            <option value="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                Prêt à vendre                                        </font></font></option>
+                            <option value="2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                Besoin de réparation                                        </font></font></option>
+                            <option value="3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                En attente                                        </font></font></option>
+                            <option value="4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                Vendu                                        </font></font></option>
+                            <option value="5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                Perdu / endommagé                                        </font></font></option>
+                        </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-phone_status-ip-container"><span class="select2-selection__rendered" id="select2-phone_status-ip-container" title="Sélectionnez l'état du téléphone"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sélectionnez l'état du téléphone</font></font></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Débloqué</font></font></label>
+                        <select style="width: 100%" class="form-control select2-hidden-accessible" required="" name="unlock_status" tabindex="-1" aria-hidden="true">
+                            <option value="0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                Non                                        </font></font></option>
+                            <option value="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                Oui                                        </font></font></option>
+                        </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-unlock_status-h7-container"><span class="select2-selection__rendered" id="select2-unlock_status-h7-container" title="
+                                Non                                        "><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                Non                                        </font></font></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                    </div>
+                </div>
+                                            <div class="col-lg-12 input-field">
+                    <div class="form-group">
+                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prix ​​total - Remise maximale</font></font></label>
+                        <div class="input-group">
+                            <input id="max_discount" required="" name="max_discount" value="" type="text" class="validate form-control">
+                            <div class="input-group-addon">
+                                                                            <select name="discount_type" class="skip" id="discount_type">
+<option value="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">%</font></font></option>
+<option value="2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fixé</font></font></option>
+</select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 input-field">
+                    <div class="form-group">
+                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prix ​​d'activation - Remise maximale</font></font></label>
+                        <div class="input-group">
+                            <input id="max_discount2" name="max_discount2" value="" type="text" class="validate form-control">
+                            <div class="input-group-addon">
+                                                                            <select name="discount_type2" class="skip" id="discount_type2">
+<option value="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">%</font></font></option>
+<option value="2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fixé</font></font></option>
+</select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label for="p_description"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">La description</font></font></label>                                    <textarea required="" class="form-control" id="p_description" name="description" rows="6"></textarea>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="col-md-12 input-field">
+                    <div class="form-group">
+                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Plan d'activation spécial</font></font></label>
+                        <select name="activation_plan" class="form-control select2-hidden-accessible" id="phone_sap" tabindex="-1" aria-hidden="true">
+<option value="" selected="selected"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pas d'idée</font></font></option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 513.5px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-phone_sap-container"><span class="select2-selection__rendered" id="select2-phone_sap-container" title="Pas d'idée"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pas d'idée</font></font></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                    </div>
+                </div>
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                        <label for="carrier"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Transporteur</font></font></label>                                    <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fas  fa-folder"></i>
+                            </div>
+                                                                    <select name="carrier" class="form-control select2-hidden-accessible" id="carrier" style="width:100%;" required="" tabindex="-1" aria-hidden="true">
+<option value="38"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chargeur</font></font></option>
+<option value="41"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Battry</font></font></option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-carrier-container"><span class="select2-selection__rendered" id="select2-carrier-container" title="Chargeur"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chargeur</font></font></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                            <a class="add_carrier btn input-group-addon"><i class="fas fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label for="category"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Catégorie</font></font></label>                                    <select name="category_id" class="form-control tip select2-hidden-accessible" id="category_id" style="width:100%;" required="" tabindex="-1" aria-hidden="true" data-original-title="" title="">
+<option value="" selected="selected"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Veuillez sélectionner</font></font></option>
+<option value="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Téléphone Max</font></font></option>
+<option value="3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Téléphone</font></font></option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" title="" tabindex="0" aria-labelledby="select2-category_id-container"><span class="select2-selection__rendered" id="select2-category_id-container"><span class="select2-selection__placeholder"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Veuillez sélectionner</font></font></span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                   </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label for="subcategory"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sous-catégorie</font></font></label>                                    <select name="sub_category" class="form-control tip select2-hidden-accessible" id="sub_category" style="width:100%;" required="" tabindex="-1" aria-hidden="true" data-original-title="" title="">
+<option value="" selected="selected"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Veuillez sélectionner</font></font></option>
+<option value="2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Téléphone Apple</font></font></option>
+<option value="4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Téléphone Samsung</font></font></option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" title="" tabindex="0" aria-labelledby="select2-sub_category-container"><span class="select2-selection__rendered" id="select2-sub_category-container"><span class="select2-selection__placeholder"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Veuillez sélectionner</font></font></span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                    </div>
+                </div>
+               
+                <div class="col-lg-12">
+                    <div class="form-group all">
+                        <div class="checkbox-styled checkbox-inline checkbox-circle">
+                            <input type="hidden" name="taxable" value="0">
+                            <input type="checkbox" checked="" id="taxable" name="taxable" value="1" data-parsley-multiple="taxable">
+                            <label for="taxable"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Imposable?</font></font></label>
+                        </div>
+                    </div>
+                </div>
+              
+           
+            <div class="form-group">
+
+                   
+                </div>
+                    
+                    <table id="mup" class="table table-striped table-bordered table-hover">
+                                <thead>
+                                <tr>
+                                    <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Numéro (s) de série / IMEI</font></font></th>
+                                    <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prix ​​Coût</font></font></th>
+                                    <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prix ​​total</font></font></th>
+                                    <th colspan="2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prix ​​d'activation</font></font></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                                 <tr>
+                                        <td>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="imei[]" placeholder="Numéro (s) de série / IMEI" value="" required="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="purchase_price[]" placeholder="Prix ​​Coût" value="" required="">
+                                               </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="list_price[]" placeholder="Liste des prix" value="" required="">
+                                               </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="activation_price" placeholder="Prix ​​d'activation" value="" required="">
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                                                            </tbody>
+                            </table>
+                                                            </div>
+                </div>
+
+    </div>
+    <div class="col-md-12 row">
+        
+        <font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input type="submit" name="submit" value="Soumettre" class="btn btn-primary"></font></font>
+    </div>
+</form>

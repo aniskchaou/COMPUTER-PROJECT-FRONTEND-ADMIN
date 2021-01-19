@@ -12,7 +12,7 @@
                     <th>Fabricant</th>
                     <th>Modele</th>
                     <th>Statut</th>
-                    <th>Blocker</th>
+                    <th>Bloquer</th>
                     <th>Vendu</th>
                     <th>Actions</th>
                 </tr>
@@ -27,12 +27,25 @@
                     <td>bon</td>
                     <td>non</td>
                     <td>non</td>
-                    <td><button type="button" data-toggle="modal" data-target="#viewNewTelephone" class="btn btn-primary btn-sm"><i class="fas fa-address-book"></i></button>
+                    <td>
                         <button type="button" data-toggle="modal" data-target="#editNewTelephone"class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
                         <button type="button" class="btn btn-danger btn-sm" onClick={deleteTask}><i class="fas fa-trash-alt"></i></button></td>
                 </tr>
 
             </tbody>
+            <tfoot>
+              <tr>
+                  <th>Nom</th>
+                  <th>IMEI</th>
+                  <th>Prix</th>
+                  <th>Fabricant</th>
+                  <th>Modele</th>
+                  <th>Statut</th>
+                  <th>Bloquer</th>
+                  <th>Vendu</th>
+                  <th>Actions</th>
+              </tr>
+          </tfoot>
         </table>
         <button  type="button" data-toggle="modal" data-target="#addNewTelephone" class="btn btn-success btn-sm">Ajouter</button>
 

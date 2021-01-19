@@ -60,7 +60,7 @@ const routes:Routes=[
   {path:'fix',component:FixComponent},
   {path:'usedphone',component:UsedTelephoneComponent},
   {path:'part',component:PartComponent},
-  {path:'client',component:BuyclientComponent},
+  {path:'buyclient',component:BuyclientComponent},
   {path:'supplier',component:SupplierComponent},
   {path:'accessory',component:AccessoryComponent},
   {path:'dashboard',component:DashboardComponent},

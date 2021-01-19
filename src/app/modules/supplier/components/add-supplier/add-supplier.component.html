@@ -1,30 +1,29 @@
-<form action="https://preview.otsglobal.org/rms_pro/panel/purchases/add" data-toggle="validator" role="form" id="purchase_form" enctype="multipart/form-data" method="post" accept-charset="utf-8">
-    <div class="row">
-        <div class="col-lg-12">
+<div class="row">
+    <div class="col-lg-12">
 
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="podate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Date</font></font></label>                                            <input type="text" name="date" value="" class="form-control input-tip datetime" id="podate" required="required">
-                    </div>
-                </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="poref"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bon de commande</font></font></label>                                        <input type="text" name="reference_no" value="2020/12/0001" class="form-control input-tip" id="poref">
+                    <label for="podate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Date</font></font></label>                                            <input type="text" name="date" value="" class="form-control input-tip datetime" id="podate" required="required">
                 </div>
             </div>
-            
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="poref"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bon de commande</font></font></label>                                        <input type="text" name="reference_no" value="0003" class="form-control input-tip" id="poref">
+            </div>
+        </div>
+        
 
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label for="postatus"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Statut</font></font></label>                                        <select name="status" id="postatus" class="form-control input-tip select select2-hidden-accessible" data-placeholder=" Status" required="required" style="width:100%;" tabindex="-1" aria-hidden="true">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="postatus"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Statut</font></font></label>                                        <select name="status" id="postatus" class="form-control input-tip select select2-hidden-accessible" data-placeholder=" Status" required="required" style="width:100%;" tabindex="-1" aria-hidden="true">
 <option value="ordered"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Commandé</font></font></option>
 </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-postatus-container"><span class="select2-selection__rendered" id="select2-postatus-container" title="Commandé"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Commandé</font></font></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                </div>
             </div>
+        </div>
 
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label for="document"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Joindre un document</font></font></label>                                        <div class="file-input file-input-new">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="document"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Joindre un document</font></font></label>                                        <div class="file-input file-input-new">
 <div class="kv-upload-progress kv-hidden" style="display: none;"><div class="progress">
 <div class="progress-bar bg-success progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;">
 0%
@@ -42,152 +41,139 @@
 <div tabindex="500" class="btn btn-primary btn-file"><i class="glyphicon glyphicon-folder-open"></i>&nbsp; <input id="document" type="file" data-browse-label="" name="document" data-show-upload="false" data-show-preview="false" class="form-control file"></div>
 </div>
 </div></div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="panel panel-warning">
+                <div class="panel-heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Veuillez les sélectionner avant d'ajouter un produit</font></font></div>
+                <div class="panel-body" style="padding: 5px;">
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <label for="posupplier"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fournisseur</font></font></label>                                                    <select class="form-control select2-hidden-accessible" name="posupplier" id="posupplier" tabindex="-1" aria-hidden="true">
+                            </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 385px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-posupplier-container"><span class="select2-selection__rendered" id="select2-posupplier-container"></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+
+                        </div>
+                    </div>
+
                 </div>
             </div>
+            <div class="clearfix"></div>
+        </div>
 
-            <div class="col-md-12">
-                <div class="panel panel-warning">
-                    <div class="panel-heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Veuillez les sélectionner avant d'ajouter un produit</font></font></div>
-                    <div class="panel-body" style="padding: 5px;">
-                        <div class="col-md-4">
-                            <div class="form-group">
 
-                                <label for="posupplier"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fournisseur</font></font></label>                                                    <select class="form-control select2-hidden-accessible" name="posupplier" id="posupplier" tabindex="-1" aria-hidden="true">
-                                </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 312.328px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-posupplier-container"><span class="select2-selection__rendered" id="select2-posupplier-container"></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-
-                            </div>
-                        </div>
-
+        <div class="col-md-12" id="sticker">
+            <div class="well well-sm">
+                <div class="form-group" style="margin-bottom:0;">
+                    <div class="input-group wide-tip">
+                        <div class="input-group-addon" style="padding-left: 10px; padding-right: 10px;">
+                            <i class="fas fa-2x fa-barcode addIcon"></i></div>
+                        <input type="text" name="add_item" value="" class="form-control input-lg ui-autocomplete-input" id="add_item" placeholder="Ajouter un produit" autocomplete="off">
                     </div>
                 </div>
                 <div class="clearfix"></div>
             </div>
+        </div>
 
-
-            <div class="col-md-12 stick" id="sticker" style="width: 1069px; z-index: 2; top: 40px;">
-                <div class="well well-sm">
-                    <div class="form-group" style="margin-bottom:0;">
-                        <div class="input-group wide-tip">
-                            <div class="input-group-addon" style="padding-left: 10px; padding-right: 10px;">
-                                <i class="fas fa-barcode addIcon"></i></div>
-                            <input type="text" name="add_item" value="" class="form-control ui-autocomplete-input" id="add_item" placeholder="Ajouter un produit" autocomplete="off">
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-
-            <div class="col-md-12">
-                <div>
-                                                            <button href="#repairmodal" role="button" type="button" class="add_repair btn btn-primary" tabindex="-1">
-                        <i class="fas fa-plus-circle"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Ajouter des pièces de réparation                                        </font></font></button>
-                                                                                                    <button href="#othermodal" role="button" type="button" class="add_other btn btn-primary" tabindex="-1">
-                        <i class="fas fa-plus-circle"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Ajouter autre                                        </font></font></button>
-                                                                                                    <button href="#accessorymodal" role="button" type="button" class="add_accessory btn btn-primary" tabindex="-1">
-                        <i class="fas fa-plus-circle"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Ajouter un accessoire                                        </font></font></button>
-                                                                                                    <button id="addManually" class="btn btn-primary" tabindex="-1">
-                        <i class="fas fa-plus-circle"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Ajouter un nouveau téléphone                                        </font></font></button>
-                                                                                                     <button id="addUsedManually" class="btn btn-primary" tabindex="-1">
-                        <i class="fas fa-plus-circle"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Ajouter un téléphone d'occasion                                        </font></font></button>
-                    
-                </div>
-                <div class="control-group table-group">
-                    <label class="table-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Items commandés</font></font></label>
-
-                    <div class="controls table-controls">
-                        <table id="poTable" class="table items table-striped table-bordered table-condensed table-hover">
-                            <thead>
-                            <tr>
-                                <th class="col-md-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nom du produit (code UPC)</font></font></th>
-                                
-
-                                <th class="col-md-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Coût unitaire</font></font></th>
-                                <th class="col-md-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Quantité</font></font></th>
-                                <th class="col-md-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Remise</font></font></th>
-                               
-                                <th><div class="pull-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sous-total ( </font></font><span class="currency"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Rp.</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> )</font></font></div>
-                                </th>
-                                <th style="width: 30px !important; text-align: center;"><i class="fas fa-trash" style="opacity:0.5; filter:alpha(opacity=50);"></i>
-                                </th>
-                            </tr>
-                            </thead>
-                            <tbody></tbody>
-                            <tfoot></tfoot>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-            <input type="hidden" name="total_items" value="" id="total_items" required="required">
-
-            <div class="col-md-12">
-                <div class="form-group">
-                    <div class="checkbox-styled checkbox-inline checkbox-circle">
-                        <input type="checkbox" class="checkbox" id="extras" value="">
-                        <label for="extras" class="padding05"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Plus d'options</font></font></label>
-                    </div>
-                </div>
-                <div class="row" id="extras-con" style="display: none;">
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <label for="potax2">Order Tax</label>                                                <input type="text" name="order_tax" value="" class="form-control input-tip" id="potax2">
-                        </div>
-                    </div>
-
+        <div class="col-md-12">
+            <div>
+                                                        <button href="#repairmodal" role="button" type="button" class="add_repair btn btn-primary" tabindex="-1">
+                    <i class="fas fa-plus-circle"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Ajouter des pièces de réparation                                        </font></font></button>
+                                                                                                <button href="#othermodal" role="button" type="button" class="add_other btn btn-primary" tabindex="-1">
+                    <i class="fas fa-plus-circle"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Ajouter autre                                        </font></font></button>
+                                                                                                <button href="#accessorymodal" role="button" type="button" class="add_accessory btn btn-primary" tabindex="-1">
+                    <i class="fas fa-plus-circle"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Ajouter un accessoire                                        </font></font></button>
+                                                                                                <button id="addManually" class="btn btn-primary" tabindex="-1">
+                    <i class="fas fa-plus-circle"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Ajouter un nouveau téléphone                                        </font></font></button>
+                                                                                                 <button id="addUsedManually" class="btn btn-primary" tabindex="-1">
+                    <i class="fas fa-plus-circle"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Ajouter un téléphone d'occasion                                        </font></font></button>
                 
+            </div>
+            <div class="control-group table-group">
+                <label class="table-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Items commandés</font></font></label>
 
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <label for="poshipping">Shipping Cost</label>                                                <input type="text" name="shipping" value="" class="form-control input-tip" id="poshipping">
-                        </div>
+                <div class="controls table-controls">
+                    <table id="poTable" class="table items table-striped table-bordered table-condensed table-hover">
+                        <thead>
+                        <tr>
+                            <th class="col-md-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nom du produit (code UPC)</font></font></th>
+                            
+
+                            <th class="col-md-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Coût unitaire</font></font></th>
+                            <th class="col-md-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Quantité</font></font></th>
+                            <th class="col-md-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Remise</font></font></th>
+                           
+                            <th><div class="pull-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sous-total (en </font></font><span class="currency"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">euros</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> )</font></font></div>
+                            </th>
+                            <th style="width: 30px !important; text-align: center;"><i class="fas fa-trash" style="opacity:0.5; filter:alpha(opacity=50);"></i>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                        <tfoot></tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <input type="hidden" name="total_items" value="" id="total_items" required="required">
+
+        <div class="col-md-12">
+            <div class="form-group">
+                <div class="checkbox-styled checkbox-inline checkbox-circle">
+                    <input type="checkbox" class="checkbox" id="extras" value="">
+                    <label for="extras" class="padding05"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Plus d'options</font></font></label>
+                </div>
+            </div>
+            <div class="row" id="extras-con" style="display: none;">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="potax2">Order Tax</label>                                                <input type="text" name="order_tax" value="" class="form-control input-tip" id="potax2">
                     </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <label>Tracking Number</label>
-                            <input type="text" name="track_code" value="" class="form-control">
-                        </div>
+                </div>
+
+            
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="poshipping">Shipping Cost</label>                                                <input type="text" name="shipping" value="" class="form-control input-tip" id="poshipping">
                     </div>
-                    <div class="col-lg-4 col-sm-12">
-                        <div class="form-group">
-                            <label>Shipping Provider</label>
-                                                                            <div class="select_provider">
-                                <select name="shipping_provider" class="form-control select2-hidden-accessible" id="provider_select" style="width: 100%" tabindex="-1" aria-hidden="true">
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Tracking Number</label>
+                        <input type="text" name="track_code" value="" class="form-control">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="form-group">
+                        <label>Shipping Provider</label>
+                                                                        <div class="select_provider">
+                            <select name="shipping_provider" class="form-control select2-hidden-accessible" id="provider_select" style="width: 100%" tabindex="-1" aria-hidden="true">
 <option value="usps">USPS</option>
 <option value="ups">UPS</option>
 <option value="fedex">FEDEX</option>
 <option value="dhl">DHL</option>
 <option value="other">Other</option>
 </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-provider_select-container"><span class="select2-selection__rendered" id="select2-provider_select-container" title="USPS">USPS</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                            </div>
-                            <div class="inp_provider" style="display: none;">
-                                <input id="provider_input" name="provider_input" type="text" class="validate form-control">
-                            </div>
+                        </div>
+                        <div class="inp_provider" style="display: none;">
+                            <input id="provider_input" name="provider_input" type="text" class="validate form-control">
                         </div>
                     </div>
                 </div>
-                <div class="clearfix"></div>
-                <div class="form-group">
-                    <label for="ponote"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Remarque</font></font></label>                                        <textarea name="note" cols="40" rows="10" class="form-control" id="ponote" style="margin-top: 10px; height: 100px;"></textarea>
-                </div>
-
             </div>
-            <div class="col-md-12">
-                <div class="from-group"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input type="submit" name="add_pruchase" value="Soumettre" id="add_pruchase" class="btn btn-primary" style="padding: 6px 15px; margin:15px 0;"></font></font>
-                    <button type="button" class="btn btn-danger" id="reset" tabindex="-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Réinitialiser</font></font></button>
-                </div>
+            <div class="clearfix"></div>
+            <div class="form-group">
+                <label for="ponote"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Remarque</font></font></label>                                        <textarea name="note" cols="40" rows="10" class="form-control" id="ponote" style="margin-top: 10px; height: 100px;"></textarea>
+            </div>
+
+        </div>
+        <div class="col-md-12">
+            <div class="from-group"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input type="submit" name="add_pruchase" value="Soumettre" id="add_pruchase" class="btn btn-primary" style="padding: 6px 15px; margin:15px 0;"></font></font>
+                <button type="button" class="btn btn-danger" id="reset" tabindex="-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Réinitialiser</font></font></button>
             </div>
         </div>
     </div>
-    <div id="bottom-total" class="well well-sm" style="margin-bottom: 0px; position: static; bottom: 0px; width: 1069px; z-index: 2;">
-        <table class="table table-bordered table-condensed totals" style="margin-bottom:0;">
-            <tbody><tr class="warning">
-                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Articles </font></font><span class="totals_val pull-right" id="titems"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0</font></font></span></td>
-                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total </font></font><span class="totals_val pull-right" id="total"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0,00</font></font></span></td>
-                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Remise de commande </font></font><span class="totals_val pull-right" id="tds"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0,00</font></font></span></td>
-                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Taxe de commande </font></font><span class="totals_val pull-right" id="ttax2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0,00</font></font></span></td>
-                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Frais de port </font></font><span class="totals_val pull-right" id="tship"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0,00</font></font></span></td>
-                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">somme finale </font></font><span class="totals_val pull-right" id="gtotal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0,00</font></font></span></td>
-            </tr>
-        </tbody></table>
-    </div>
-    </form>
+</div>

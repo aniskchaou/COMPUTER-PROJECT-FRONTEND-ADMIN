@@ -1,116 +1,727 @@
-<div class="box-body">
+<form id="rpair_form" class="parsley-form" novalidate="">
+    <div id="preprepair_hide"><input name="checktoggle_506f77657220427574746f6e" type="hidden" value="0"
+            class="input-xs" style="display: none;"><input name="checktoggle_506f77657220427574746f6e"
+            id="checktoggle_506f77657220427574746f6e" value="1" type="checkbox" class="input-xs"
+            style="display: none;"><input name="checktoggle_57696669" type="hidden" value="0" class="input-xs"
+            style="display: none;"><input name="checktoggle_57696669" id="checktoggle_57696669" value="1"
+            type="checkbox" class="input-xs" style="display: none;"><input name="checktoggle_566f6c756d6520627574746f6e"
+            type="hidden" value="0" class="input-xs" style="display: none;"><input
+            name="checktoggle_566f6c756d6520627574746f6e" id="checktoggle_566f6c756d6520627574746f6e" value="1"
+            type="checkbox" class="input-xs" style="display: none;"><input name="checktoggle_476c617373" type="hidden"
+            value="0" class="input-xs" style="display: none;"><input name="checktoggle_476c617373"
+            id="checktoggle_476c617373" value="1" type="checkbox" class="input-xs" style="display: none;"><input
+            name="checktoggle_4c4344" type="hidden" value="0" class="input-xs" style="display: none;"><input
+            name="checktoggle_4c4344" id="checktoggle_4c4344" value="1" type="checkbox" class="input-xs"
+            style="display: none;"><input name="checktoggle_4368617267696e6720506f7274" type="hidden" value="0"
+            class="input-xs" style="display: none;"><input name="checktoggle_4368617267696e6720506f7274"
+            id="checktoggle_4368617267696e6720506f7274" value="1" type="checkbox" class="input-xs"
+            style="display: none;"><input name="checktoggle_486f6d6520427574746f6e" type="hidden" value="0"
+            class="input-xs" style="display: none;"><input name="checktoggle_486f6d6520427574746f6e"
+            id="checktoggle_486f6d6520427574746f6e" value="1" type="checkbox" class="input-xs"
+            style="display: none;"><input name="checktoggle_4261636b20476c617373" type="hidden" value="0"
+            class="input-xs" style="display: none;"><input name="checktoggle_4261636b20476c617373"
+            id="checktoggle_4261636b20476c617373" value="1" type="checkbox" class="input-xs"
+            style="display: none;"><input name="checktoggle_43656c6c756c6172205369676e616c" type="hidden" value="0"
+            class="input-xs" style="display: none;"><input name="checktoggle_43656c6c756c6172205369676e616c"
+            id="checktoggle_43656c6c756c6172205369676e616c" value="1" type="checkbox" class="input-xs"
+            style="display: none;"><input name="checktoggle_4261636b2043616d657261" type="hidden" value="0"
+            class="input-xs" style="display: none;"><input name="checktoggle_4261636b2043616d657261"
+            id="checktoggle_4261636b2043616d657261" value="1" type="checkbox" class="input-xs"
+            style="display: none;"><input name="checktoggle_46726f6e742043616d657261" type="hidden" value="0"
+            class="input-xs" style="display: none;"><input name="checktoggle_46726f6e742043616d657261"
+            id="checktoggle_46726f6e742043616d657261" value="1" type="checkbox" class="input-xs"
+            style="display: none;"><input name="checktoggle_4d6963726f70686f6e65" type="hidden" value="0"
+            class="input-xs" style="display: none;"><input name="checktoggle_4d6963726f70686f6e65"
+            id="checktoggle_4d6963726f70686f6e65" value="1" type="checkbox" class="input-xs"
+            style="display: none;"><input type="text" name="cust_pin_code" class="form-control input-xs"
+            style="display: none;"><input type="hidden" name="patternlock" id="patternlock" class="input-xs"
+            style="display: none;"></div>
+    <input type="hidden" name="sign_id" id="repair_sign_id" value="" class="input-xs">
+    <input type="hidden" name="sign_name" id="repair_sign_name" value="" class="input-xs">
+    <input type="hidden" name="attachment_data" id="attachment_data" value="" class="input-xs">
+
     <div class="row">
-        <div class="col-md-12 col-lg-4 bio-row">
-            <p><span class="bold"><i class="fas fa-user"></i> Customer</span><span id="rv_client">rueds joan</span></p>
-        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="client_name">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Client</font>
+                            </font>
+                        </label>
+                        <font color="#FF0017">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"> *</font>
+                            </font>
+                        </font>
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fas  fa-user"></i>
+                            </div>
 
-        <div class="col-md-12 col-lg-4 bio-row">
-            <p><span class="bold"><i class="fas fa-phone"></i> Telephone</span><span id="rv_telephone"></span></p>
-        </div>
+                            <select required="" id="client_name" name="client_name" data-num="1"
+                                class="form-control client_name select2-hidden-accessible select input-xs"
+                                style="width: 100%" tabindex="-1" aria-hidden="true">
+                                <option></option>
+                                <option value="1">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Magasin de téléphone jayalath (774)
+                                            778-9980</font>
+                                    </font>
+                                </option>
+                                <option value="9">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">ed sam 064090909</font>
+                                    </font>
+                                </option>
+                                <option value="8">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">nama nama (112) 938-3849</font>
+                                    </font>
+                                </option>
+                                <option value="7">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Gökjan Karagöz </font>
+                                    </font>
+                                </option>
+                                <option value="6">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">salim. </font>
+                                        <font style="vertical-align: inherit;">(111) 273-8988</font>
+                                    </font>
+                                </option>
+                                <option value="5">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">salim. </font>
+                                        <font style="vertical-align: inherit;">(017) 218-6864</font>
+                                    </font>
+                                </option>
+                                <option value="4">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">wqdqwdq rtwg </font>
+                                    </font>
+                                </option>
+                                <option value="3">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Kislay Kislay (323) 232-3232</font>
+                                    </font>
+                                </option>
+                                <option value="2">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">rueds joan </font>
+                                    </font>
+                                </option>
+                            </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                                style="width: 100%;"><span class="selection"><span
+                                        class="select2-selection select2-selection--single" role="combobox"
+                                        aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                        aria-labelledby="select2-client_name-container"><span
+                                            class="select2-selection__rendered" id="select2-client_name-container"><span
+                                                class="select2-selection__placeholder">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">Veuillez sélectionner</font>
+                                                </font>
+                                            </span></span><span class="select2-selection__arrow" role="presentation"><b
+                                                role="presentation"></b></span></span></span><span
+                                    class="dropdown-wrapper" aria-hidden="true"></span></span>
+                            <a class="add_c btn input-group-addon"><i class="fas fa-user-plus"></i></a>
+                            <a style="display: none;" class="edit_c btn input-group-addon" id="modify_client"><i
+                                    class="fas fa-edit"></i></a>
 
-        <div class="col-md-12 col-lg-4 bio-row stato">
-            <p><span class="bold"><i class="fas fa-signal"></i> Condition </span><span id="rv_condition">7</span></p>
-        </div>
-        <div class="col-md-12 col-lg-4 bio-row">
-            <p><span class="bold"><i class="fas fa-calendar"></i> Opened At </span><span id="rv_created_at">08.01.2021 14:14:22</span></p>
-        </div>
-        <div class="col-md-12 col-lg-4 bio-row">
-            <p><span class="bold"><i class="fas fa-link"></i> Defect </span><span id="rv_defect">disply not working</span></p>
-        </div>
-        <div class="col-md-12 col-lg-4 bio-row">
-            <p><span class="bold"><i class="fas fa-folder-open"></i> Category </span><span id="rv_category">Tablet</span></p>
-        </div>
-        <div class="col-md-12 col-lg-4 bio-row">
-            <p><span class="bold"><i class="fas fa-tag"></i> IMEI/Serial </span><span id="rv_imei">34567</span></p>
-        </div>
-        <div class="col-md-12 col-lg-4 bio-row">
-            <p><span class="bold"><i class="fas fa-tag"></i> Manufacturer </span><span id="rv_manufacturer">Dell</span></p>
-        </div>
-        <div class="col-md-12 col-lg-4 bio-row">
-            <p><span class="bold"><i class="fas fa-tag"></i> Model </span><span id="rv_model">gbn</span></p>
-        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="category_select">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Catégorie</font>
+                            </font>
+                        </label>
+                        <font color="#FF0017">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"> *</font>
+                            </font>
+                        </font>
+                        <div class="select_cat">
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fas  fa-folder"></i>
+                                </div>
+                                <select required="" id="category_select" name="category_select" data-num="1"
+                                    class="form-control m-bot15 select2-hidden-accessible select input-xs"
+                                    style="width: 100%" tabindex="-1" aria-hidden="true">
+                                    <option></option>
 
-        <div class="col-md-12 col-lg-4 bio-row">
-            <p><span class="bold"><i class="fas fa-dollar-sign"></i>Deposit</span><span id="rv_advance">0.00 Euro</span></p>
-        </div>
-        <div class="col-md-12 col-lg-4 bio-row nofloat">
-            <p><span class="bold"><i class="fas fa-dollar-sign"></i>Repair Price </span><span id="rv_price">777.00 Euro</span></p>
-        </div>
-        <div class="col-md-12 col-lg-4 bio-row">
-            <p><span class="bold"><i class="fas fa-phone"></i> Telephone </span><span id="rv_phone_number"></span></p>
-        </div>
-        <div class="col-md-12 col-lg-4 bio-row">
-            <p><span class="bold"><i class="fas fa-eye"></i> Repair Code </span><span id="rv_rep_code">REPAIR/0029</span></p>
-        </div>
-
-        <div class="col-md-12 col-lg-4 bio-row">
-            <p><span class="bold"><i class="fas fa-eye"></i> Assign Repair To </span><span id="rv_assigned_to">Admin Admin</span></p>
-        </div>
-
-                        <div class="col-md-12 col-lg-4 bio-row">
-                <p><span class="bold"><i class="fas fa-info-circle"></i> Deposit </span><span class="show_custom" id="v4465706f736974"></span></p>
+                                    <option value="Phone">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Téléphone</font>
+                                        </font>
+                                    </option>
+                                    <option value="Tablet">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Tablette</font>
+                                        </font>
+                                    </option>
+                                    <option value="PC">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">PC</font>
+                                        </font>
+                                    </option>
+                                </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                                    style="width: 100%;"><span class="selection"><span
+                                            class="select2-selection select2-selection--single" role="combobox"
+                                            aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                            aria-labelledby="select2-category_select-container"><span
+                                                class="select2-selection__rendered"
+                                                id="select2-category_select-container"><span
+                                                    class="select2-selection__placeholder">
+                                                    <font style="vertical-align: inherit;">
+                                                        <font style="vertical-align: inherit;">Veuillez sélectionner
+                                                        </font>
+                                                    </font>
+                                                </span></span><span class="select2-selection__arrow"
+                                                role="presentation"><b
+                                                    role="presentation"></b></span></span></span><span
+                                        class="dropdown-wrapper" aria-hidden="true"></span></span>
+                            </div>
+                        </div>
+                        <div class="input-group inp_cat" style="display: none;">
+                            <div class="input-group-addon">
+                                <i class="fas  fa-folder"></i>
+                            </div>
+                            <input id="category_input" name="category_input" type="text"
+                                class="validate form-control input-xs">
+                        </div>
+                    </div>
+                </div>
             </div>
-        
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="model_manufacturer">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Fabricant</font>
+                                </font>
+                            </label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fas  fa-folder"></i>
+                                </div>
+                                <select required="" id="manufacturer" name="manufacturer" data-num="1"
+                                    class="form-control m-bot15 select2-hidden-accessible select input-xs"
+                                    style="width: 100%" tabindex="-1" aria-hidden="true">
+                                    <option></option>
+                                    <option value="41">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Pomme</font>
+                                        </font>
+                                    </option>
+                                    <option value="42">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Dell</font>
+                                        </font>
+                                    </option>
+                                    <option value="94">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Kia</font>
+                                        </font>
+                                    </option>
+                                    <option value="96">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">kjhjkjhk</font>
+                                        </font>
+                                    </option>
+                                    <option value="106">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Huawei</font>
+                                        </font>
+                                    </option>
+                                </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                                    style="width: 100%;"><span class="selection"><span
+                                            class="select2-selection select2-selection--single" role="combobox"
+                                            aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                            aria-labelledby="select2-manufacturer-container"><span
+                                                class="select2-selection__rendered"
+                                                id="select2-manufacturer-container"><span
+                                                    class="select2-selection__placeholder">
+                                                    <font style="vertical-align: inherit;">
+                                                        <font style="vertical-align: inherit;">Veuillez sélectionner
+                                                        </font>
+                                                    </font>
+                                                </span></span><span class="select2-selection__arrow"
+                                                role="presentation"><b
+                                                    role="presentation"></b></span></span></span><span
+                                        class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                <a class="add_manufacturer btn input-group-addon"><i class="fas fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
 
-         <div class="col-md-12">
-                        <label class="table-label" for="combo">Summary of Repairs</label>
-
-                        <div class="controls table-controls">
-                            <table id="prTable" class="table items table-striped table-bordered table-condensed table-hover">
-                                <thead>
-                                <tr>
-                                    <th class="col-md-5">Product Name (UPC Code)</th>
-                                    <th class="col-md-2">Unit Cost</th>
-                                    <th class="col-md-2">Unit Price</th>
-                                    <th class="col-md-2">Discount</th>
-                                    <th class="col-md-2">Tax</th>
-                                </tr>
-                                </thead>
-                                <tbody><tr><td colspan="4">nothing to display</td></tr></tbody>
-
-                            </table>
-                            <table class="table items table-striped table-bordered table-condensed table-hover">
-                                <tfoot>
-                                    <tr>
-                                        <th colspan="1" class="warning"><span class="pull-right">Subtotal</span></th>
-                                        <th colspan="1" class="info"><span id="price_span">0</span></th>
-
-                                        <th colspan="1" class="warning"><span class="pull-right">Total Tax</span></th>
-                                        <th colspan="1" class="success"><span id="tax_spane">0.00</span></th>
-
-                                    </tr>
-                                    <tr id="labor_tr">
-                                        <th colspan="1" class="warning"><span class="pull-right">Labor</span></th>
-                                        <th colspan="1" class="success"><span id="sc_span">777.00</span></th>
-                                        <th colspan="1" class="warning"><span class="pull-right">Labor + Total</span></th>
-                                        <th colspan="1" class="success"><span id="totalprice_span">777.00</span></th>
-
-                                    </tr>
-                                    <tr>
-                                        <th colspan="3" class="warning"><span class="pull-right">Grand Total</span></th>
-                                        <th class="success"><span id="gtotal">777.00</span></th>
-                                    </tr>
-                                </tfoot>
-                            </table>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="model">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Modèle</font>
+                                </font>
+                            </label>
+                            <font color="#FF0017">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;"> *</font>
+                                </font>
+                            </font>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fas  fa-folder"></i>
+                                </div>
+                                <span class="twitter-typeahead"
+                                    style="position: relative; display: inline-block;"><input
+                                        class="form-control model_name_typeahead tt-hint input-xs"
+                                        style="width: 100%; position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);"
+                                        readonly="" autocomplete="off" spellcheck="false" tabindex="-1" dir="ltr"><input
+                                        class="form-control model_name_typeahead tt-input input-xs"
+                                        id="reparation_model" name="model" required=""
+                                        style="width: 100%; position: relative; vertical-align: top; background-color: transparent;"
+                                        autocomplete="off" spellcheck="false" dir="auto">
+                                    <pre aria-hidden="true"
+                                        style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre>
+                                    <div class="tt-menu"
+                                        style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;">
+                                        <div class="tt-dataset tt-dataset-model"></div>
+                                    </div>
+                                </span>
+                            </div>
                         </div>
                     </div>
 
-        <div class="row">
-            <div class="col-md-12">
-                <div class="col-md-6 bio-row fastsms">
-                    <div class="form-group rv_comment">
-                        <label for="fastsms">Quick SMS</label>                            <textarea class="form-control" id="fastsms" rows="6" placeholder="Instantly send a text message to the client by entering your text here"></textarea>
-                        <button type="button" id="sendsmsfast" class="btn btn-xs btn-primary"><i class="fas fa-check"></i> Send</button>
+
+
+
+
+                </div>
+
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="defect">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Défaut</font>
+                                </font>
+                            </label>
+                            <font color="#FF0017">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;"> *</font>
+                                </font>
+                            </font>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fas  fa-link"></i>
+                                </div>
+                                <input class="form-control input-xs" id="defect" name="defect" required=""
+                                    style="width: 100%;">
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 bio-row textareacom">
-                    <div class="form-group comment">
-                        <label for="rv_comment">Noted Problems &amp; Technician Comments</label>&nbsp;(Please note any and all defects with device. This will show up on the work order report.)
-                        <textarea class="form-control" id="rv_comment" rows="6">hhhhhhhhhhh</textarea>
-                        <button type="button" id="updateComment" class="btn btn-xs btn-primary"><i class="fas fa-check"></i> Update</button>
+
+
+
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Attribuer la réparation à</font>
+                                </font>
+                            </label>
+                            <font color="#FF0017">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;"> *</font>
+                                </font>
+                            </font>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fas  fa-folder"></i>
+                                </div>
+                                <select required="" id="assigned_to" name="assigned_to" data-num="1"
+                                    class="form-control m-bot15 select2-hidden-accessible select input-xs"
+                                    style="width: 100%" tabindex="-1" aria-hidden="true">
+                                    <option></option>
+                                    <option value="2">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Admin Admin</font>
+                                        </font>
+                                    </option>
+                                    <option value="37">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Muammmer Ersosylu</font>
+                                        </font>
+                                    </option>
+                                    <option value="38">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Gökhan Karagöz</font>
+                                        </font>
+                                    </option>
+                                </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                                    style="width: 100%;"><span class="selection"><span
+                                            class="select2-selection select2-selection--single" role="combobox"
+                                            aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                            aria-labelledby="select2-assigned_to-container"><span
+                                                class="select2-selection__rendered"
+                                                id="select2-assigned_to-container"><span
+                                                    class="select2-selection__placeholder">
+                                                    <font style="vertical-align: inherit;">
+                                                        <font style="vertical-align: inherit;">Veuillez sélectionner
+                                                        </font>
+                                                    </font>
+                                                </span></span><span class="select2-selection__arrow"
+                                                role="presentation"><b
+                                                    role="presentation"></b></span></span></span><span
+                                        class="dropdown-wrapper" aria-hidden="true"></span></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Numéro de série</font>
+                            </font>
+                        </label>
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fas  fa-code"></i>
+                            </div>
+                            <input id="serial_number" name="serial_number" class="validate form-control input-xs">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 input-field">
+                    <div class="form-group">
+                        <label>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Plans de garantie</font>
+                            </font>
+                        </label>
+                        <select name="warranty_id" class="form-control tip select2-hidden-accessible select input-xs"
+                            id="warranty_id" style="width:100%;" data-original-title="" title="" tabindex="-1"
+                            aria-hidden="true">
+                            <option value="0">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Aucune garantie</font>
+                                </font>
+                            </option>
+                            <option value="1">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">3 mois</font>
+                                </font>
+                            </option>
+                            <option value="3">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">0 jours</font>
+                                </font>
+                            </option>
+                            <option value="4">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">3 années</font>
+                                </font>
+                            </option>
+                            <option value="6">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">0 jours</font>
+                                </font>
+                            </option>
+                            <option value="7">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">1 mois</font>
+                                </font>
+                            </option>
+                            <option value="8">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">1 ans</font>
+                                </font>
+                            </option>
+                        </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                            style="width: 100%;"><span class="selection"><span
+                                    class="select2-selection select2-selection--single" role="combobox"
+                                    aria-haspopup="true" aria-expanded="false" title="" tabindex="0"
+                                    aria-labelledby="select2-warranty_id-container"><span
+                                        class="select2-selection__rendered" id="select2-warranty_id-container"
+                                        title="Aucune garantie"><span class="select2-selection__placeholder">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">Veuillez sélectionner</font>
+                                            </font>
+                                        </span></span><span class="select2-selection__arrow" role="presentation"><b
+                                            role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+                                aria-hidden="true"></span></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="sms">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Envoyer un SMS automatique?</font>
+                            </font>
+                        </label>
+                        <div class="checkbox-styled">
+                            <input type="hidden" value="0" name="sms" class="input-xs">
+                            <input type="checkbox" class="skip input-xs" value="1" name="sms" id="sms"
+                                data-parsley-multiple="sms">
+                            <label for="sms">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Je souhaite que le client reçoive un SMS pour
+                                        chaque mise à jour automatique.</font>
+                                </font>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6">
+
+                    <div class="form-group">
+                        <label for="email">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Envoyer un e-mail automatique</font>
+                            </font>
+                        </label>
+                        <div class="checkbox-styled">
+                            <input type="hidden" value="0" name="email" class="input-xs">
+
+                            <input type="checkbox" class="skip input-xs" value="1" name="email" id="email"
+                                data-parsley-multiple="email">
+                            <label for="email">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Envoyer un e-mail automatique</font>
+                                </font>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Dépôt</font>
+                            </font>
+                        </label>
+                        <input id="custom_4465706f736974" name="custom_4465706f736974" type="text"
+                            class="custom validate form-control input-xs">
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <button href="#prerepair" class="prerepair_show btn btn-primary">
+                        <i class="fas fa-plus-circle"></i>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;"> Liste de contrôle avant la réparation </font>
+                        </font>
+                    </button>
+                    <hr>
+                    <div class="form-group">
+                        <label for="comment">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Problèmes notés et commentaires des techniciens
+                                </font>
+                            </font>
+                        </label> <textarea class="form-control" id="comment" name="comment" rows="2"></textarea>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group combo">
+                        <label for="add_item">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Ajouter des pièces utilisées pour la réparation
+                                </font>
+                            </font>
+                        </label>
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fas  fa-link"></i>
+                            </div>
+                            <input type="text" name="add_item" value=""
+                                class="form-control ttip ui-autocomplete-input input-xs" id="add_r_item"
+                                data-placement="top" data-trigger="focus"
+                                data-bv-notempty-message="please_add_items_below"
+                                placeholder="Ajouter des pièces utilisées pour la réparation" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="advance">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Dépôt</font>
+                            </font>
+                        </label>
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fas  fa-dollar-sign"></i>
+                            </div>
+                            <input id="advance" name="advance" type="text" value="0"
+                                class="validate form-control input-xs" placeholder="Dépôt">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="potax2">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Taux d'imposition</font>
+                            </font>
+                        </label> <select id="potax2"
+                            class="form-control input-tip select select2-hidden-accessible input-xs" name="tax_id"
+                            style="width: 100%;" tabindex="-1" aria-hidden="true">
+                            <option value="1">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Pas de taxes</font>
+                                </font>
+                            </option>
+                            <option value="2">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Taxe de Hueytown</font>
+                                </font>
+                            </option>
+                            <option value="3">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Taxe de l'Alabama</font>
+                                </font>
+                            </option>
+                            <option value="4">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Comté de Jefferson</font>
+                                </font>
+                            </option>
+                            <option value="5">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Taxe Edu du comté de Jefferson</font>
+                                </font>
+                            </option>
+                            <option value="6">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Frais e911</font>
+                                </font>
+                            </option>
+                            <option value="7">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Taxe de l'État du Texas</font>
+                                </font>
+                            </option>
+                            <option value="8">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">TVA</font>
+                                </font>
+                            </option>
+                            <option value="9">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Frais de boutique</font>
+                                </font>
+                            </option>
+                            <option value="10">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">pompe</font>
+                                </font>
+                            </option>
+                            <option value="11"></option>
+                            <option value="12">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Ekron Kft</font>
+                                </font>
+                            </option>
+                            <option value="13">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">lecteur ca</font>
+                                </font>
+                            </option>
+                            <option value="14">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">bob</font>
+                                </font>
+                            </option>
+                            <option value="15">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">TVA15</font>
+                                </font>
+                            </option>
+                            <option value="16">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">TPS</font>
+                                </font>
+                            </option>
+                            <option value="17">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">TPS</font>
+                                </font>
+                            </option>
+                            <option value="18">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Φ.Π.Α.</font>
+                                </font>
+                            </option>
+                        </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                            style="width: 100%;"><span class="selection"><span
+                                    class="select2-selection select2-selection--single" role="combobox"
+                                    aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                    aria-labelledby="select2-potax2-container"><span class="select2-selection__rendered"
+                                        id="select2-potax2-container" title="Pas de taxes">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Pas de taxes</font>
+                                        </font>
+                                    </span><span class="select2-selection__arrow" role="presentation"><b
+                                            role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+                                aria-hidden="true"></span></span>
+                    </div>
+                </div>
+
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="service_charges">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Ajouter le coût de la main-d'œuvre à la
+                                    réparation</font>
+                            </font>
+                        </label>
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fas  fa-dollar-sign"></i>
+                            </div>
+                            <input id="service_charges" name="service_charges" type="text" value="0"
+                                class="validate form-control input-xs"
+                                placeholder="Ajouter le coût de la main-d'œuvre à la réparation">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
         </div>
     </div>
-</div>
+    <div style="clear: both;"></div>
+
+
+
+</form>
