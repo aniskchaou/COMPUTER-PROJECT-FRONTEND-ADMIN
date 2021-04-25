@@ -1,100 +1,108 @@
 <ul class="nav navbar-nav" style="margin-top: 20px;">
-    <li >
-       <a routerLinkActive="active" routerLink="/dashboard"><i class="menu-icon fa fa-laptop"></i>Tableau de bord </a>
-   </li>
- 
-      <li class="menu-item-has-children dropdown">
-       <a routerLinkActive="active" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <li>
+        <a routerLinkActive="active" routerLink="/dashboard"><i class="menu-icon fa fa-laptop"></i>Tableau de bord </a>
+    </li>
+
+    <li class="menu-item-has-children dropdown">
+        <a routerLinkActive="active" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
             <i class="menu-icon fa fa-table"></i>Générale</a>
-       <ul class="sub-menu children dropdown-menu">
-           <li><i class="fa fa-table"></i><a routerLinkActive="active" routerLink="/fix">Réparations</a></li>
-           <li><i class="fa fa-table"></i><a routerLinkActive="active" routerLink="/client">Clients</a></li>
-         <!-- <li><i class="fa fa-table"></i><a routerLink="/fix">Point de vente</a></li>-->
-       </ul>
-   </li>
+        <ul class="sub-menu children dropdown-menu">
+            <li><a routerLinkActive="active" routerLink="/fix">Réparations</a></li>
+            <li><a routerLinkActive="active" routerLink="/client">Clients</a></li>
+            <!-- <li><i class="fa fa-table"></i><a routerLink="/fix">Point de vente</a></li>-->
+        </ul>
+    </li>
 
 
 
-   <li class="menu-item-has-children dropdown">
-       <a routerLinkActive="active" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Stock</a>
-       <ul class="sub-menu children dropdown-menu">                            <li><i class="fa fa-puzzle-piece"></i><a routerLink="/part">Pieces de rechange</a></li>
-           <li><i class="fa fa-id-badge"></i><a routerLinkActive="active" routerLink="/newphone">Nouveaux Téléphones</a></li>
-           <li><i class="fa fa-bars"></i><a routerLinkActive="active" routerLink="/usedphone">Téléphones d'occassion</a></li>
+    <li class="menu-item-has-children dropdown">
+        <a routerLinkActive="active" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Stock</a>
+        <ul class="sub-menu children dropdown-menu">
+            <li><a routerLink="/part">Pieces de rechange</a></li>
+            <li><a routerLinkActive="active" routerLink="/newphone">Nouveaux
+                    Téléphones</a></li>
+            <li><a routerLinkActive="active" routerLink="/usedphone">Téléphones
+                    d'occassion</a></li>
 
-           <li><i class="fa fa-id-card"></i><a routerLinkActive="active" routerLink="/accessory">Accessoires</a></li>
-          <!-- <li><i class="fa fa-exclamation-triangle"></i><a href="ui-alerts.html">Plans cellulaires</a></li>
-           <li><i class="fa fa-spinner"></i><a href="ui-progressbar.html">Progress Autre produits</a></li>
-           <li><i class="fa fa-fire"></i><a href="ui-modals.html">Imprimer les codes-barres</a></li>
-           <li><i class="fa fa-book"></i><a href="ui-switches.html">Compter le stock</a></li>
-           <li><i class="fa fa-th"></i><a href="ui-grids.html">Transfert de stock</a></li>-->
-          
-       </ul>
-   </li>
-   <li class="menu-item-has-children dropdown">
-       <a routerLinkActive="active" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Achats</a>
-       <ul class="sub-menu children dropdown-menu">
-           <li><i class="fa fa-table"></i><a routerLinkActive="active" routerLink="/supplier">Founisseurs</a></li>
-           <li><i class="fa fa-table"></i><a routerLinkActive="active" routerLink="/buyclient">Clients</a></li>
-       </ul>
-   </li>
-   <!--
-   <li class="menu-item-has-children dropdown">
-       <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Comptes bancaires</a>
-       <ul class="sub-menu children dropdown-menu">
-           <li><i class="menu-icon fa fa-th"></i><a href="forms-basic.html"> Comptes bancaire</a></li>
-           <li><i class="menu-icon fa fa-th"></i><a href="forms-advanced.html">Dépenses</a></li>
-           <li><i class="menu-icon fa fa-th"></i><a href="forms-advanced.html">Type de dépenses</a></li>
-           <li><i class="menu-icon fa fa-th"></i><a href="forms-advanced.html">Dépots</a></li>
-           <li><i class="menu-icon fa fa-th"></i><a href="forms-advanced.html">Type de depots</a></li>
-       </ul>
-   </li>
--->
-   <!--
-   <li class="menu-item-has-children dropdown">
-       <a routerLinkActive="active" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Rapports</a>
-       <ul class="sub-menu children dropdown-menu">
-           <li><i class="menu-icon fa fa-fort-awesome"></i><a routerLinkActive="active" routerLink="/stock">Stock</a></li>
-           <li><i class="menu-icon ti-themify-logo"></i><a href="font-themify.html">Financier</a></li>
-           <li><i class="menu-icon ti-themify-logo"></i><a href="font-themify.html">ventes</a></li>
-       </ul>
-   </li>
--->
+            <li><a routerLinkActive="active" routerLink="/accessory">Accessoires</a></li>
+            <li><a routerLinkActive="active" routerLink="/cellularplans">Plans cellulaires</a></li>
+            <li><a routerLinkActive="active" routerLink="/otherproducts"> Autre produits</a></li>
+
+        </ul>
+    </li>
+    <li class="menu-item-has-children dropdown">
+        <a routerLinkActive="active" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Achats</a>
+        <ul class="sub-menu children dropdown-menu">
+            <li><a routerLinkActive="active" routerLink="/supplier">Founisseurs</a></li>
+            <li><a routerLinkActive="active" routerLink="/buyclient">Clients</a></li>
+        </ul>
+    </li>
+    <!--
+    <li class="menu-item-has-children dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i
+                class="menu-icon fa fa-th"></i>Comptes bancaires</a>
+        <ul class="sub-menu children dropdown-menu">
+            <li><i class="menu-icon fa fa-th"></i><a href="forms-basic.html"> Comptes bancaire</a></li>
+            <li><i class="menu-icon fa fa-th"></i><a href="forms-advanced.html">Dépenses</a></li>
+            <li><i class="menu-icon fa fa-th"></i><a href="forms-advanced.html">Type de dépenses</a></li>
+            <li><i class="menu-icon fa fa-th"></i><a href="forms-advanced.html">Dépots</a></li>
+            <li><i class="menu-icon fa fa-th"></i><a href="forms-advanced.html">Type de depots</a></li>
+        </ul>
+    </li>
+
+    <li class="menu-item-has-children dropdown">
+        <a routerLinkActive="active" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Rapports</a>
+        <ul class="sub-menu children dropdown-menu">
+            <li><a>Stock</a>
+            </li>
+            <li><a>Financier</a></li>
+            <li><a>ventes</a></li>
+        </ul>
+    </li>
 
 
-   <!--
-   <li class="menu-item-has-children dropdown">
-       <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bar-chart"></i>Réglages</a>
-       <ul class="sub-menu children dropdown-menu">
-           <li><i class="menu-icon fa fa-line-chart"></i><a href="charts-chartjs.html">regalges generaux</a></li>
-           <li><i class="menu-icon fa fa-area-chart"></i><a href="charts-flot.html">taux imposition</a></li>
-           <li><i class="menu-icon fa fa-pie-chart"></i><a href="charts-peity.html">fabricants</a></li>
-           <li><i class="menu-icon fa fa-pie-chart"></i><a href="charts-peity.html">fournisseurs</a></li>
-           <li><i class="menu-icon fa fa-pie-chart"></i><a href="charts-peity.html">ctaegories</a></li>
-           <li><i class="menu-icon fa fa-pie-chart"></i><a href="charts-peity.html">garanties</a></li>
-           <li><i class="menu-icon fa fa-pie-chart"></i><a href="charts-peity.html">SMS</a></li>
-       </ul>
-   </li>
-  
-   <li class="menu-item-has-children dropdown">
-       <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-area-chart"></i>Comissions</a>
-       <ul class="sub-menu children dropdown-menu">
-           <li><i class="menu-icon fa fa-map-o"></i><a href="maps-gmap.html"> Commisions</a></li>
-           <li><i class="menu-icon fa fa-street-view"></i><a href="maps-vector.html">Commisions de categorie</a></li>
+
+
+    <li class="menu-item-has-children dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i
+                class="menu-icon fa fa-bar-chart"></i>Réglages</a>
+        <ul class="sub-menu children dropdown-menu">
+            <li><i class="menu-icon fa fa-line-chart"></i><a href="charts-chartjs.html">regalges generaux</a></li>
+            <li><i class="menu-icon fa fa-area-chart"></i><a href="charts-flot.html">taux imposition</a></li>
+            <li><i class="menu-icon fa fa-pie-chart"></i><a href="charts-peity.html">fabricants</a></li>
+            <li><i class="menu-icon fa fa-pie-chart"></i><a href="charts-peity.html">fournisseurs</a></li>
+            <li><i class="menu-icon fa fa-pie-chart"></i><a href="charts-peity.html">ctaegories</a></li>
+            <li><i class="menu-icon fa fa-pie-chart"></i><a href="charts-peity.html">garanties</a></li>
+            <li><i class="menu-icon fa fa-pie-chart"></i><a href="charts-peity.html">SMS</a></li>
+        </ul>
+    </li>
+
+    <li class="menu-item-has-children dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i
+                class="menu-icon fa fa-area-chart"></i>Comissions</a>
+        <ul class="sub-menu children dropdown-menu">
+            <li><i class="menu-icon fa fa-map-o"></i><a href="maps-gmap.html"> Commisions</a></li>
+            <li><i class="menu-icon fa fa-street-view"></i><a href="maps-vector.html">Commisions de categorie</a></li>
             <li><i class="menu-icon fa fa-street-view"></i><a href="maps-vector.html">Commisions de produit</a></li>
-             <li><i class="menu-icon fa fa-street-view"></i><a href="maps-vector.html">Commisions de categorie</a></li>
-       </ul>
-   </li>
- 
-   <li class="menu-item-has-children dropdown">
-       <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-glass"></i>Paramètres</a>
-       <ul class="sub-menu children dropdown-menu">
-           <li><i class="menu-icon fa fa-sign-in"></i><a href="page-login.html">Notifications</a></li>
-           <li><i class="menu-icon fa fa-sign-in"></i><a href="page-register.html">Emails</a></li>
-          
-       </ul>
-   </li>
+            <li><i class="menu-icon fa fa-street-view"></i><a href="maps-vector.html">Commisions de categorie</a></li>
+        </ul>
+    </li>
+    
+    <li class="menu-item-has-children dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i
+                class="menu-icon fa fa-glass"></i>Paramètres</a>
+        <ul class="sub-menu children dropdown-menu">
+            <li><i class="menu-icon fa fa-sign-in"></i><a href="page-login.html">Notifications</a></li>
+            <li><i class="menu-icon fa fa-sign-in"></i><a href="page-register.html">Emails</a></li>
+
+        </ul>
+    </li>
 -->
-   <li>
-    <a routerLinkActive="active" routerLink="/configuration"><i class="menu-icon fa fa-laptop"></i>Paramètres</a>
-</li>
+    <li>
+        <a routerLinkActive="active" routerLink="/configuration"><i class="menu-icon fa fa-laptop"></i>Paramètres</a>
+    </li>
 </ul>

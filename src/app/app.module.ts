@@ -48,26 +48,30 @@ import { ViewSupplierComponent } from './modules/supplier/components/view-suppli
 import { AddUsedTelephoneComponent } from './modules/usedphone/usedphone/add-used-telephone/add-used-telephone.component';
 import { EditUsedTelephoneComponent } from './modules/usedphone/usedphone/edit-used-telephone/edit-used-telephone.component';
 import { ViewUsedPhoneComponent } from './modules/usedphone/usedphone/view-used-phone/view-used-phone.component';
+import { CellularplanComponent } from './modules/stock/cellularplan/cellularplan.component';
+import { OtherproductComponent } from './modules/stock/otherproduct/otherproduct.component';
 
 
 
-const routes:Routes=[
+const routes: Routes = [
 
-  {path:'client',component:ClientComponent},
-  {path:'product',component:ProduitComponent},
-  {path:'stock',component:StockComponent},
-  {path:'newphone',component:NewTelephoneComponent},
-  {path:'fix',component:FixComponent},
-  {path:'usedphone',component:UsedTelephoneComponent},
-  {path:'part',component:PartComponent},
-  {path:'buyclient',component:BuyclientComponent},
-  {path:'supplier',component:SupplierComponent},
-  {path:'accessory',component:AccessoryComponent},
-  {path:'dashboard',component:DashboardComponent},
-  {path:'login',component:LoginComponent},
-  {path:'configuration',component:ConfigurationComponent},
-  {path:'',redirectTo:'login',pathMatch:'full'},
-  {path:'**',redirectTo:'login',pathMatch:'full'}]
+  { path: 'client', component: ClientComponent },
+  { path: 'product', component: ProduitComponent },
+  { path: 'stock', component: StockComponent },
+  { path: 'newphone', component: NewTelephoneComponent },
+  { path: 'fix', component: FixComponent },
+  { path: 'usedphone', component: UsedTelephoneComponent },
+  { path: 'part', component: PartComponent },
+  { path: 'buyclient', component: BuyclientComponent },
+  { path: 'supplier', component: SupplierComponent },
+  { path: 'accessory', component: AccessoryComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'otherproducts', component: OtherproductComponent },
+  { path: 'cellularplans', component: CellularplanComponent },
+  { path: 'configuration', component: ConfigurationComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '**', redirectTo: 'login', pathMatch: 'full' }]
 
 
 @NgModule({
@@ -116,13 +120,15 @@ const routes:Routes=[
     ViewProductComponent,
     ViewStockComponent,
     ViewSupplierComponent,
-    ViewUsedPhoneComponent
+    ViewUsedPhoneComponent,
+    CellularplanComponent,
+    OtherproductComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [{provide: APP_BASE_HREF, useValue: ''}],
+  providers: [{ provide: APP_BASE_HREF, useValue: '' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
